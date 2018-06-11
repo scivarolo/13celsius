@@ -27,3 +27,29 @@
 @mixin column-width($numberColumns: 3) {
 	width: map-get( $columns, $numberColumns ) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
 }
+
+
+@mixin matrix-ii() {
+  font-family: "matrix-ii", serif;
+  font-weight: 300;
+}
+
+@mixin matrix-ii-bold() {
+  font-family: "matrix-ii", serif;
+  font-weight: 700;
+}
+
+@mixin matrix-extended() {
+  font-family: "matrix-ii-ext-semi-wide";
+  font-weight: 400;
+}
+
+@mixin termina() {
+  font-family: "termina", sans-serif;
+  font-weight: 400;
+}
+
+@mixin termina-bold() {
+  font-family: "termina", sans-serif;
+  font-weight: 700;
+}
