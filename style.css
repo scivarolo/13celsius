@@ -356,7 +356,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #404040;
+  color: #d8d4bf;
   font-family: "matrix-ii", serif;
   font-weight: 300;
   font-size: 16px;
@@ -422,11 +422,11 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #fff;
+  background: #1d0019;
   /* Fallback for when there is no custom background color defined. */ }
 
 hr {
-  background-color: #ccc;
+  background-color: #d8d4bf;
   border: 0;
   height: 1px;
   margin-bottom: 1.5em; }
@@ -546,11 +546,11 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #d8d4bf; }
   a:visited {
-    color: purple; }
+    color: #c5bf9f; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #c5bf9f; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -650,7 +650,7 @@ a {
     clip: auto !important;
     -webkit-clip-path: none;
             clip-path: none;
-    color: #21759b;
+    color: #1d0019;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
