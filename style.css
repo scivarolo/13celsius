@@ -474,7 +474,6 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
   background: #e6e6e6;
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
@@ -560,10 +559,11 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
+  float: right;
+  font-family: "termina", sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -589,6 +589,7 @@ a {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
+    padding: 10px;
     float: left;
     position: relative; }
   .main-navigation a {
@@ -600,11 +601,54 @@ a {
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 37.5em) {
+.menu-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #d8d4bf;
+  font-family: "termina", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 30px;
+  padding: 15px 15px 12px;
+  float: right;
+  -webkit-transition: .125s all ease-in-out;
+  transition: .125s all ease-in-out; }
+  .toggled .menu-toggle, .menu-toggle:hover, .menu-toggle:active, .menu-toggle:focus {
+    background-color: #d8d4bf;
+    color: #1d0019; }
+
+@media screen and (max-width: 52em) {
+  .main-navigation ul {
+    clear: both;
+    background-color: #d8d4bf;
+    width: 100%; }
+  .main-navigation {
+    float: none; }
+  .main-navigation li {
+    float: none; }
+  .main-navigation a {
+    color: #1d0019; }
+    .main-navigation a:hover, .main-navigation a:active, .main-navigation a:focus {
+      color: #500045; }
+  .current-menu-item {
+    background-color: #500045; }
+    .current-menu-item a {
+      color: #d8d4bf; } }
+
+@media screen and (min-width: 52em) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: block; } }
+    display: block;
+    margin: 30px 45px; } }
+
+@media screen and (max-width: 56em) {
+  .main-navigation {
+    font-size: 11px;
+    font-size: 0.6875rem;
+    margin-left: 0; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -727,6 +771,19 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Header and Footer
+--------------------------------------------------------------*/
+.custom-logo {
+  width: 150px;
+  margin: 15px; }
+
+.site-branding {
+  float: left;
+  max-width: 50%; }
+  .home .site-branding {
+    display: none; }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

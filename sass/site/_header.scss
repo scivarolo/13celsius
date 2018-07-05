@@ -1,0 +1,15 @@
+.custom-logo {
+  width: 150px;
+  margin: 15px;
+}
+.site-branding {
+  float: left;
+  max-width: 50%;
+  .home & {
+    display: none;
+  }
+}
+.site-header {
+  // display: flex;
+  // justify-content: space-between;
+}
