@@ -53,3 +53,39 @@
   font-family: "termina", sans-serif;
   font-weight: 600;
 }
+
+@mixin link-animation() {
+  text-decoration: none;
+  @include termina-bold();
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: " ";
+    background-color: $celsius-white;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    overflow: hidden;
+    transition: width .25s ease-in-out; //transform: translateX(-100%);
+  }
+  .link-arrow {
+    display: inline-block;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all .25s ease-in-out;
+  }
+  &:hover {
+    .link-arrow {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    &::after {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
