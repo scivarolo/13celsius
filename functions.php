@@ -226,3 +226,10 @@ function events_post_type() {
 add_action( 'init', 'events_post_type', 0 );
 
 }
+
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' => 'Site Footer',
+		'post_id' => 'site_footer'
+	));
+}
