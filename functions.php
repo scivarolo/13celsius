@@ -129,6 +129,10 @@ function celsius_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	if ( is_page(get_page_by_title('Menu') ) ) {
+		wp_enqueue_script('celsius-menu', get_template_directory_uri() . '/js/celsiusmenu.js');
+	}
+
 }
 add_action( 'wp_enqueue_scripts', 'celsius_scripts' );
 

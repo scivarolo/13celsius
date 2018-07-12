@@ -1207,6 +1207,114 @@ Mastheads
 .event__heading, .event__description {
   clear: none; }
 
+/*---- Menu Sub Nav ----*/
+.menu-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 0; }
+
+#menu-subnav {
+  border-top: 1px solid #d8d4bf;
+  border-bottom: 1px solid #d8d4bf; }
+
+.menu-subnav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px 0; }
+  .menu-subnav li {
+    padding: 10px; }
+
+.menu-section {
+  margin: 2em 0; }
+
+.menu-section-header {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 40px;
+  font-size: 2.5rem; }
+
+.subcategory-header {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid rgba(216, 212, 191, 0.5); }
+  .subcategory-header::after {
+    content: "-";
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    line-height: 0;
+    font-size: 40px;
+    font-size: 2.5rem; }
+  .subcategory-header h3 {
+    margin-bottom: .25em;
+    font-size: 30px;
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em; }
+
+.menu-subcategory input:checked ~ label::after {
+  content: "+"; }
+
+.menu-subcategory input {
+  display: none; }
+  .menu-subcategory input .table-wrapper {
+    height: 100%;
+    overflow: hidden;
+    -webkit-transition: height .25s ease;
+    transition: height .25s ease; }
+  .menu-subcategory input:checked ~ .table-wrapper {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height .25s ease;
+    transition: height .25s ease; }
+
+.subcategory-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 2em; }
+
+.wine-row {
+  -webkit-transition: background-color .125s ease-in-out;
+  transition: background-color .125s ease-in-out; }
+  .wine-row:hover {
+    background-color: #37002f; }
+
+.wine-name,
+.wine-type,
+.wine-origin {
+  margin-right: 10px; }
+
+.wine-name {
+  font-family: "termina", sans-serif;
+  font-weight: 600; }
+
+.wine-type {
+  font-family: "matrix-ii", serif;
+  font-weight: 700;
+  font-style: italic; }
+
+.wine-origin {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px; }
+
+.subcategory-table th {
+  border-bottom: 1px solid rgba(216, 212, 191, 0.25);
+  padding: 10px; }
+
+.wine-row td {
+  padding: 5px; }
+
+.wine-row:first-child td {
+  padding-top: 15px; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

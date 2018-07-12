@@ -1,0 +1,112 @@
+/*---- Menu Sub Nav ----*/
+.menu-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 0;
+}
+#menu-subnav {
+  border-top: 1px solid $celsius-white;
+  border-bottom: 1px solid $celsius-white;
+}
+.menu-subnav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  li {
+    padding: 10px;
+  }
+}
+
+.menu-section {
+  margin: 2em 0;
+}
+
+.menu-section-header {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  @include font-size(4);
+}
+.subcategory-header {
+  display: block;
+  position:relative;
+  border-bottom: 1px solid rgba($celsius-white, 0.5);
+  &::after {
+    content: "-";
+    position:absolute;
+    right: 5%;
+    top: 50%;
+    line-height: 0;
+    @include font-size(4);
+  }
+  h3 {
+    margin-bottom: .25em;
+    @include font-size(3);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+.menu-subcategory input:checked ~ label::after {
+  content: "+";
+}
+
+.menu-subcategory input {
+  display: none;
+  .table-wrapper {
+    height: 100%;
+    overflow:hidden;
+    transition: height .25s ease;
+  }
+  &:checked ~ .table-wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height .25s ease;
+  }
+}
+
+.subcategory-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 2em;
+}
+
+.wine-row {
+  transition: background-color .125s ease-in-out;
+  &:hover {
+    background-color: lighten($celsius-purple, 5%);
+  }
+}
+
+.wine-name,
+.wine-type,
+.wine-origin {
+  margin-right: 10px;
+}
+
+.wine-name {
+  @include termina-bold();
+}
+.wine-type {
+  @include matrix-ii-bold();
+  font-style: italic;
+}
+.wine-origin {
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+.subcategory-table th {
+  border-bottom: 1px solid rgba($celsius-white, 0.25);
+  padding: 10px;
+}
+
+.wine-row td {
+  padding: 5px;
+}
+.wine-row:first-child td {
+  padding-top: 15px;
+}
