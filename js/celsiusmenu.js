@@ -95,24 +95,17 @@ function drawMenu(wineList) {
     sectionDiv.appendChild(sectionHeader);
     
     // create subcat
-    
     for (let j = 1; j < section.length; j++) {
       let subCat = section[j];
       let subCatHTML = document.createElement('div');
       subCatHTML.classList.add('menu-subcategory');
 
-      //This will become the collapsible accordion header
-      let subCatCheckbox = document.createElement('input');
-      subCatCheckbox.setAttribute('type', 'checkbox');
-      subCatCheckbox.setAttribute('checked', true);
-      subCatCheckbox.setAttribute('id', 'section' + i + 'subcat' + j);
-      let subCatHeader = document.createElement('label');
-      subCatHeader.setAttribute('for', 'section' + i + 'subcat' + j);
-      subCatHeader.classList.add('subcategory-header');
+      let subCatHeader = document.createElement('div');
+      subCatHeader.classList.add('subcategory-header', 'accordion-button');
       subCatHeader.innerHTML = '<h3>' + subCat[0].subcat + '</h3>';
 
       let subCatDiv = document.createElement('div');
-      subCatDiv.classList.add('table-wrapper');
+      subCatDiv.classList.add('table-wrapper', 'accordion-panel');
       let subCatTable = document.createElement('table');
       subCatTable.classList.add('subcategory-table');
       
@@ -179,7 +172,6 @@ function drawMenu(wineList) {
       subCatTable.append(subCatRows);
 
       // Combine all of the pieces into subCatHTML
-      subCatHTML.append(subCatCheckbox);
       subCatHTML.append(subCatHeader);
       subCatDiv.append(subCatTable);
       subCatHTML.append(subCatDiv);
@@ -187,5 +179,22 @@ function drawMenu(wineList) {
     }
 
     document.getElementById('wine-menu').append(sectionDiv);
-  }  
-}
+  } 
+  
+  //Accordion Animation
+  let accordion = document.getElementsByClassName('accordion-button');
+
+  for (let i = 0; i < accordion.length; i++) {
+    accordion[i].addEventListener('click', function () {
+      this.classList.toggle('active');
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+
+} //end drawMenu
+

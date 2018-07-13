@@ -1240,40 +1240,35 @@ Mastheads
   font-size: 40px;
   font-size: 2.5rem; }
 
-.subcategory-header {
-  display: block;
+.subcategory-header h3 {
+  margin-bottom: .25em;
+  font-size: 30px;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; }
+
+.accordion-button {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   position: relative;
   border-bottom: 1px solid rgba(216, 212, 191, 0.5); }
-  .subcategory-header::after {
-    content: "-";
+  .accordion-button::after {
+    content: "+";
     position: absolute;
     right: 5%;
     top: 50%;
     line-height: 0;
     font-size: 40px;
     font-size: 2.5rem; }
-  .subcategory-header h3 {
-    margin-bottom: .25em;
-    font-size: 30px;
-    font-size: 1.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em; }
+  .accordion-button.active::after {
+    content: "-"; }
 
-.menu-subcategory input:checked ~ label::after {
-  content: "+"; }
-
-.menu-subcategory input {
-  display: none; }
-  .menu-subcategory input .table-wrapper {
-    height: 100%;
-    overflow: hidden;
-    -webkit-transition: height .25s ease;
-    transition: height .25s ease; }
-  .menu-subcategory input:checked ~ .table-wrapper {
-    height: 0;
-    overflow: hidden;
-    -webkit-transition: height .25s ease;
-    transition: height .25s ease; }
+.accordion-panel {
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out; }
 
 .subcategory-table {
   border-collapse: collapse;
