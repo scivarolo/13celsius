@@ -22,7 +22,22 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			if(is_page(get_page_by_title('Menu') ) ) {
+			/* Page Masthead */ ?>
+			<?php $masthead_image = get_field('background_image');
+					if($masthead_image) : ?>
+						<div class="masthead masthead--page" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed center/cover;">
+					<?php else : ?>
+						<div class="masthead masthead--page">
+					<?php endif; ?>
+						<div class="masthead__content">
+							<div class="grid-wrapper">
+								<h1 class="masthead__title"><?php the_title(); ?></h1>
+								<div class="masthead__intro"><?php the_content(); ?></div>
+							</div>
+						</div>
+					</div>
+					
+			<?php if(is_page(get_page_by_title('Menu') ) ) {
 				get_template_part('template-parts/content', 'menu' );
 			} else {
 			  get_template_part( 'template-parts/content', 'page' );

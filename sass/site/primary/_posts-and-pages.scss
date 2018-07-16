@@ -21,62 +21,6 @@
 	margin: 0 0 1.5em;
 }
 
-
-/*--------------------------------------------------------------
-Mastheads
---------------------------------------------------------------*/
-
-.masthead {
-  width: 100vw;
-  max-width: 100%;
-  height: 90vh;
-  position: relative;
-  //position: fixed;
-  background-color: lighten($celsius-purple, 10%);
-  background: linear-gradient(to top, rgba($celsius-purple, 0.5), rgba($celsius-purple, 0.5)),  url('https://picsum.photos/1920/1080/?random');
-  background-blend-mode: multiply;
-  background-size: cover;
-}
-
-.masthead__logo {
-  width: 400px;
-  max-width: 90%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.masthead__details {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 30px;
-  width: 100%;
-  height: 100%;
-  @include termina();
-  @media (min-width: 600px) {
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: row;
-  }
-}
-
-.masthead__hours,
-.masthead__location {
-  margin-top: 1em;
-  p {
-    margin: 0;
-  }
-}
-
-.masthead__hours {
-  @media(min-width: 600px) {
-    text-align: right;
-  }
-}
-
-
 /*---------- Page Sections ----------*/
 
 $block-break: 'min-width: 600px';

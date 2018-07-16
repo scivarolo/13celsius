@@ -54,6 +54,12 @@
 
 	li {
     padding: 10px;
+		@media (min-width: 72em) {
+			padding: 10px 20px;
+		}
+		@media (max-width: 52em) {
+			padding: 17px 20px 15px;
+		}
 		float: left;
 		position: relative;
 
@@ -65,6 +71,7 @@
 	a {
 		display: block;
 		text-decoration: none;
+		@include link-animation();
 	}
 
 	.current_page_item > a,
@@ -103,13 +110,16 @@
   .main-navigation ul {
     clear: both;
     background-color: $celsius-white;
-    width: 100%;
+		margin: 0 30px;
+		transform: translateY(-30px);
   }
   .main-navigation {
     float: none;
   }
   .main-navigation li {
-    float: none;
+		float: none;
+		width: 100%;
+		//background-color: $celsius-white;
   }
 
   .main-navigation a {

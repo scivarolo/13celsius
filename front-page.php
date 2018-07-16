@@ -29,8 +29,14 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */ ?>
 
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <div class="masthead">
+				
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<?php $masthead_image = get_field('background_image');
+					if($masthead_image) : ?>
+						<div class="masthead masthead--home" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed center/cover;">
+					<?php else : ?>
+						<div class="masthead masthead--home">
+					<?php endif; ?>
 						<img class="masthead__logo" alt="13 Celsius" src="<?php echo get_template_directory_uri(); ?>/images/celsiuslogo.svg" />
 						<div class="masthead__details">
 							<div class="masthead__location">
