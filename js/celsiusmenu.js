@@ -70,17 +70,23 @@ function drawMenu(wineList) {
   }
 
   // Create subnav for menu
-
-  let subNavHtml = '<ul class="menu-subnav">';
+  let subNav = document.createElement('ul');
+  subNav.classList.add('menu-subnav');
+  let subNavHTML = '';
   for (let i = 0; i < wineMenu.length; i++) {
-    subNavHtml += '<li><a href="#section' + i + '">' + wineMenu[i][0].section + '</a></li>';
+    subNavHTML += '<li><a href="#section' + i + '">' + wineMenu[i][0].section + '</a></li>';
   }
-  subNavHtml += '</ul>';
+  subNav.innerHTML = subNavHTML;
 
-  document.getElementById('menu-subnav').innerHTML = subNavHtml;
+  document.querySelector('.subnav').append(subNav);
 
 
   // Display the Menu
+  
+  // Temporary placeholder content
+  // TODO: Add descriptions to Google Sheet
+  let sectionDesc = 'Our list of fine and dynamic wines from all over the world is curated and cared for by Adele Corrigan. Let our staff help you find that glass or bottle of wine in our cellar that is meant specifically for you. We are able to offer tastes of a lot of our wines.';
+  let subCatDescr = 'Our list of fine and dynamic wines from all over the world is curated and cared for by Adele Corrigan. Let our staff help you find that glass or bottle of wine in our cellar that is meant specifically for you. We are able to offer tastes of a lot of our wines.';
 
   // // Create div and add header for each section
   for( let i = 0; i < wineMenu.length; i++) {
@@ -91,9 +97,14 @@ function drawMenu(wineList) {
     sectionHeader = document.createElement('h2');
     sectionHeader.classList.add('menu-section-header');
     sectionHeader.innerHTML = section[0].section;
+    //TODO: Replace description with description from Google Sheet.
+    let sectionDescription = document.createElement('p');
+    sectionDescription.classList.add('menu-section__desc');
+    sectionDescription.innerHTML = sectionDesc;
+
     // add sectionHeader to sectionDiv
     sectionDiv.appendChild(sectionHeader);
-    
+    sectionDiv.appendChild(sectionDescription);
     // create subcat
     for (let j = 1; j < section.length; j++) {
       let subCat = section[j];
@@ -103,6 +114,11 @@ function drawMenu(wineList) {
       let subCatHeader = document.createElement('div');
       subCatHeader.classList.add('subcategory-header', 'accordion-button');
       subCatHeader.innerHTML = '<h3>' + subCat[0].subcat + '</h3>';
+
+      //TODO: Replace description with Google Sheet Description.
+      let subCatDescription = document.createElement('p');
+      subCatDescription.classList.add('subcategory-desc');
+      subCatDescription.innerHTML = subCatDescr;
 
       let subCatDiv = document.createElement('div');
       subCatDiv.classList.add('table-wrapper', 'accordion-panel');
@@ -148,20 +164,30 @@ function drawMenu(wineList) {
         subCatRow.append(wineDetails);
 
         wineGlass = document.createElement('td');
+        wineGlass.classList.add('wine-glass');
         if(wine.glass) {
-          wineGlass.innerHTML = 'yes';
+          //wineGlass.innerHTML = 'yes';
+          wineGlass.classList.add('available');
+        } else {
+          wineGlass.classList.add('unavailable');
         }
         subCatRow.append(wineGlass);
 
         wineHalf = document.createElement('td');
+        wineHalf.classList.add('wine-half');
         if(wine.half) {
-          wineHalf.innerHTML = 'yes';
+          wineHalf.classList.add('available');
+        } else {
+          wineHalf.classList.add('unavailable');
         }
         subCatRow.append(wineHalf);
         
         wineBottle = document.createElement('td');
+        wineBottle.classList.add('wine-bottle');
         if(wine.bottle) {
-          wineBottle.innerHTML = 'yes';
+          wineBottle.classList.add('available');
+        } else {
+          wineBottle.classList.add('unavailable');
         }
         subCatRow.append(wineBottle);
         
@@ -173,6 +199,7 @@ function drawMenu(wineList) {
 
       // Combine all of the pieces into subCatHTML
       subCatHTML.append(subCatHeader);
+      subCatDiv.append(subCatDescription);
       subCatDiv.append(subCatTable);
       subCatHTML.append(subCatDiv);
       sectionDiv.append(subCatHTML);
