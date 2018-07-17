@@ -685,10 +685,10 @@ a {
     display: block;
     margin: 30px 45px; } }
 
-@media screen and (max-width: 56em) {
+@media screen and (max-width: 57em) {
   .main-navigation {
-    font-size: 11px;
-    font-size: 0.6875rem;
+    font-size: 13px;
+    font-size: 0.8125rem;
     margin-left: 0; } }
 
 .site-main .comment-navigation, .site-main
@@ -844,39 +844,47 @@ Mastheads
   height: 90vh; }
 
 .masthead--page {
-  min-height: 300px; }
+  min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   @media (min-width: 800px) {
     .masthead--page {
-      min-height: 450px; } }
+      min-height: 650px; } }
 
 .masthead__content {
-  display: grid;
-  height: 100%;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 100px;
-  grid-gap: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  grid-template-columns: repeat(3, 1fr); }
+          align-items: center; }
 
-.masthead__content .grid-wrapper {
-  grid-column: span 3; }
-  @media (min-width: 800px) {
-    .masthead__content .grid-wrapper {
-      grid-column: 2 / span 2; } }
+@media (min-width: 800px) {
+  .masthead__content .grid-wrapper {
+    margin-left: calc(33% - 1em); } }
 
 .masthead__title {
   font-family: "matrix-ii-ext-semi-wide";
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .15em;
+  line-height: 1.2;
   font-size: 40px;
   font-size: 2.5rem;
-  margin: 0; }
+  margin: 0 0 .25em; }
 
 .masthead__intro {
   line-height: 1.6; }

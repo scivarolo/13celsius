@@ -34,28 +34,27 @@ Mastheads
 
 .masthead--page {
   min-height: 300px;
+  display: flex;
+  flex-direction: column;
   @media (min-width: 800px) {
-    min-height: 450px;
+    min-height: 650px;
   }
 }
 
 .masthead__content {
-  display: grid;
-  height: 100%;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 100px;
-  grid-gap: 1em;
+  display: flex;
+  flex: 1;
   align-items: center;
-  grid-template-columns: repeat(3, 1fr);
 }
 
 .masthead__content .grid-wrapper {
-  grid-column: span 3;
   @media(min-width: 800px) {
-    grid-column: 2 / span 2;
+    margin-left: calc(33% - 1em);
   }
 }
 
@@ -63,8 +62,9 @@ Mastheads
   @include matrix-extended();
   text-transform: uppercase;
   letter-spacing: .15em;
+  line-height: 1.2;
   @include font-size(4);
-  margin: 0;
+  margin: 0 0 .25em;
 }
 
 .masthead__intro {

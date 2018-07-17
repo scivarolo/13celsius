@@ -38,7 +38,9 @@ get_header();
 					</div>
 					
 			<?php if(is_page(get_page_by_title('Menu') ) ) {
-				get_template_part('template-parts/content', 'menu' );
+				get_template_part( 'template-parts/content', 'menu' );
+			} elseif(is_page(get_page_by_title('About Thirteen') ) ) {
+				get_template_part( 'tempalte-parts/content', 'about' );
 			} else {
 			  get_template_part( 'template-parts/content', 'page' );
 			}	

@@ -146,9 +146,9 @@
 	}
 }
 
-@media screen and (max-width: 56em) {
+@media screen and (max-width: 57em) {
   .main-navigation {
-    @include font-size(1.1);
+    @include font-size(1.3);
     margin-left: 0;
   }
 }
