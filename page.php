@@ -39,8 +39,10 @@ get_header();
 					
 			<?php if(is_page(get_page_by_title('Menu') ) ) {
 				get_template_part( 'template-parts/content', 'menu' );
-			} else if(is_page(get_page_by_title('About Thirteen') ) ) {
+			} elseif(is_page(get_page_by_title('About Thirteen') ) ) {
 				get_template_part( 'template-parts/content', 'about' );
+			} elseif(is_page(get_page_by_title('Inquiries') ) ) { 
+				get_template_part( 'template-parts/content', 'inquiries' );
 			} else {
 			  get_template_part( 'template-parts/content', 'page' );
 			}	

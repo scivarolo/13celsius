@@ -1326,6 +1326,7 @@ Mastheads
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  line-height: 1.2;
   font-size: 50px;
   font-size: 3.125rem; }
   @media (min-width: 1000px) {
@@ -1446,6 +1447,89 @@ Mastheads
   .person__bio {
     grid-column: 2 / span 5;
     grid-row-start: 5; } }
+
+/*---------- Inquiries ----------*/
+.page-section--inquiries {
+  padding-bottom: 4vw; }
+  .page-section--inquiries::after {
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both; }
+  @media (min-width: 800px) {
+    .page-section--inquiries .left-column {
+      width: 48%;
+      float: left; }
+    .page-section--inquiries .right-column {
+      width: 48%;
+      float: right; } }
+
+.inquiries__intro {
+  font-family: "termina", sans-serif;
+  font-weight: 600; }
+
+#inquiries-form label, #inquiries-form input:not([type="submit"]), #inquiries-form textarea {
+  display: block;
+  width: 100%; }
+
+#inquiries-form label {
+  font-family: "termina", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 5px; }
+
+#inquiries-form input:not([type="submit"]), #inquiries-form textarea {
+  margin-bottom: 1em;
+  border: none;
+  border-bottom: 2px solid #d8d4bf;
+  background-color: #46003c;
+  color: #d8d4bf;
+  border-radius: 0;
+  padding: 10px; }
+
+#inquiries-form .animated-submit {
+  text-decoration: none;
+  font-family: "termina", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  position: relative;
+  cursor: pointer;
+  color: #d8d4bf;
+  background: none;
+  border: none;
+  font-size: 20px;
+  font-size: 1.25rem;
+  padding-left: 0;
+  padding-right: 0; }
+  #inquiries-form .animated-submit::after {
+    content: " ";
+    background-color: #d8d4bf;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    overflow: hidden;
+    -webkit-transition: width .25s ease-in-out;
+    transition: width .25s ease-in-out; }
+  #inquiries-form .animated-submit .link-arrow {
+    display: inline-block;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    opacity: 0;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out; }
+  #inquiries-form .animated-submit:hover .link-arrow {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; }
+  #inquiries-form .animated-submit:hover::after {
+    width: 100%;
+    left: 0; }
 
 /*---- Menu Sub Nav ----*/
 .subnav .container {

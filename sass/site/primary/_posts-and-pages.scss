@@ -161,6 +161,7 @@ $block-break: 'min-width: 600px';
   @include termina-bold();
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  line-height: 1.2;
   @include font-size(5);
   @media(min-width: 1000px) {
     @include font-size(8.4);
@@ -280,3 +281,60 @@ $block-break: 'min-width: 600px';
     grid-row-start: 5;
   }
 }
+
+/*---------- Inquiries ----------*/
+
+.page-section--inquiries {
+  padding-bottom: 4vw;
+  &::after {
+    @include clearfix();
+    @include clearfix-after();
+  }
+  @media(min-width: 800px) {
+    .left-column {
+      width: 48%;
+      float: left;
+    }
+    .right-column {
+      width: 48%;
+      float: right;
+    }
+  }
+}
+
+.inquiries__intro {
+  @include termina-bold();
+}
+
+#inquiries-form {
+  label, input:not([type="submit"]), textarea {
+    display: block;
+    width: 100%;
+  }
+  label {
+    @include termina();
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    @include font-size(1.4);
+    margin-bottom: 5px;
+  }
+  input:not([type="submit"]), textarea {
+    margin-bottom: 1em;
+    border: none;
+    border-bottom: 2px solid $celsius-white;
+    background-color: lighten($celsius-purple, 8%);
+    color: $celsius-white;
+    border-radius: 0;
+    padding: 10px;
+  }
+  .animated-submit {
+    @include link-animation();
+    color: $celsius-white;
+    background: none;
+    border: none;
+    @include font-size(2);
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+  
