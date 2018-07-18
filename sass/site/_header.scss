@@ -52,12 +52,6 @@ Mastheads
   align-items: center;
 }
 
-.masthead__content .grid-wrapper {
-  @media(min-width: 800px) {
-    margin-left: calc(33% - 1em);
-  }
-}
-
 .masthead__title {
   @include matrix-extended();
   text-transform: uppercase;

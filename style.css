@@ -890,10 +890,6 @@ Mastheads
       -ms-flex-align: center;
           align-items: center; }
 
-@media (min-width: 800px) {
-  .masthead__content .grid-wrapper {
-    margin-left: calc(33% - 1em); } }
-
 .masthead__title {
   font-family: "matrix-ii-ext-semi-wide";
   font-weight: 400;
