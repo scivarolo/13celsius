@@ -78,7 +78,7 @@ function drawMenu(wineList) {
   }
   subNav.innerHTML = subNavHTML;
 
-  document.querySelector('.subnav').append(subNav);
+  document.querySelector('.subnav .container').append(subNav);
 
 
   // Display the Menu
@@ -94,6 +94,8 @@ function drawMenu(wineList) {
     let sectionDiv = document.createElement('div');
     sectionDiv.setAttribute('id', 'section' + i);
     sectionDiv.classList.add('menu-section');
+    let sectionDivContainer = document.createElement('div');
+    sectionDivContainer.classList.add('container');
     sectionHeader = document.createElement('h2');
     sectionHeader.classList.add('menu-section-header');
     sectionHeader.innerHTML = section[0].section;
@@ -102,9 +104,10 @@ function drawMenu(wineList) {
     sectionDescription.classList.add('menu-section__desc');
     sectionDescription.innerHTML = sectionDesc;
 
-    // add sectionHeader to sectionDiv
-    sectionDiv.appendChild(sectionHeader);
-    sectionDiv.appendChild(sectionDescription);
+    // add sectionHeader to sectionDivContainer
+    sectionDiv.appendChild(sectionDivContainer);
+    sectionDivContainer.appendChild(sectionHeader);
+    sectionDivContainer.appendChild(sectionDescription);
     // create subcat
     for (let j = 1; j < section.length; j++) {
       let subCat = section[j];
@@ -202,7 +205,7 @@ function drawMenu(wineList) {
       subCatDiv.append(subCatDescription);
       subCatDiv.append(subCatTable);
       subCatHTML.append(subCatDiv);
-      sectionDiv.append(subCatHTML);
+      sectionDivContainer.append(subCatHTML);
     }
 
     document.getElementById('wine-menu').append(sectionDiv);

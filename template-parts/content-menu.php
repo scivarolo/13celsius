@@ -13,8 +13,10 @@
 
 	<div class="entry-content menu-content">
 		<div class="subnav">
+			<div class="container">
 			<h3 class="subnav__label">Browse our Selection</h3>
 			<!-- populated by Javascript -->
+			</div>
 		</div>
 		<div id="wine-menu">
 		<!-- populated by Javascript -->
