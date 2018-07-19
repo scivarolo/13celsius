@@ -12,7 +12,7 @@
 }
 
 .footer-hours {
-  margin-bottom: 5em;
+  margin-bottom: 1em;
 }
 
 .footer-hours p {
@@ -34,15 +34,32 @@
   @include termina();
   @include font-size(2.4);
 }
-.footer-details .container {
-  @media (min-width: 800px) {
+
+.footer-family {
+  max-width: 500px;
+  .family-logo {
+    width: 50%;
+    float: left;
+  }
+}
+@media (min-width: 800px) {
+  .footer-details .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-gap: 10%;
   }
+  .footer-hours {
+    grid-row: 1 / span 1;
+  }
+  .footer-location {
+    grid-row: 1 / span 2;
+  }
+  .footer-family {
+    grid-row: 2 / span 1;
+  }
 }
 
-.footer-family {
+.footer-family-old {
   .footer-label {
     text-align: center;
   }
@@ -52,6 +69,9 @@
     @media (min-width: 600px) {
       grid-template-columns: 1fr 1.5fr 1.5fr;
     }
+  }
+  img svg {
+    color: $celsius-purple;
   }
 }
 
@@ -67,6 +87,7 @@
 .footer-section__main .container {
   display: grid;
   text-align: center;
+  padding-bottom: 4vw;
 }
 
 .footer-13logo img {
@@ -117,7 +138,8 @@
 /*------- Footer Nav --------*/
 
 .footer-nav {
-  margin: 1em 0;
+  margin: 1em auto;
+  max-width: 1200px;
   ul {
     list-style: none;
     margin: 0;

@@ -27,9 +27,22 @@
 					<p><img src="<?php echo get_template_directory_uri(); ?>/images/map-temp.png" /></p>
 					<p><a href="mailto:<?php echo antispambot( 'info@13celsius.com' ); ?>"><?php echo antispambot('info@13celsius.com'); ?></a></p>
 				</div>
+				<div class="footer-family">
+					<h2 class="footer-label">Our Family</h2>
+				<div class="family-logo">
+					<a href="//mongooseversuscobra.com">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/mvscpurple.svg" />
+					</a>
+				</div>
+				<div class="family-logo">
+					<a href="//weights-measures.com/">
+						<img src="<?php echo get_template_directory_uri(); ?>/images/wmpurple.svg" />
+					</a>
+				</div>
+				</div>
 			</div>
 		</div>
-		<div class="footer-section footer-family --dark">
+		<!-- <div class="footer-section footer-family-old --dark">
 			<div class="container">
 				<h2 class="footer-label">Our Family</h2>
 				<div class="family-logo">
@@ -43,8 +56,8 @@
 					</a>
 				</div>
 			</div>
-		</div>
-		<div class="footer-section footer-section__main --medium">
+		</div> -->
+		<div class="footer-section footer-section__main --dark">
 			<div class="container">
 				<div class="footer-13logo">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/thirteenonly.svg" />
