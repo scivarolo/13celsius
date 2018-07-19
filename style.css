@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
 Theme Name: celsius
 Theme URI: http://underscores.me/
@@ -1468,11 +1469,20 @@ Mastheads
   font-family: "termina", sans-serif;
   font-weight: 600; }
 
-#inquiries-form label, #inquiries-form input:not([type="submit"]), #inquiries-form textarea {
+.inquiries-form .acf-fields > .acf-field {
+  padding: 0;
+  border: none;
+  margin-top: 20px; }
+
+.inquiries-form .af-submit {
+  padding-left: 0;
+  padding-right: 0; }
+
+.inquiries-form label, .inquiries-form input:not([type="submit"]), .inquiries-form textarea {
   display: block;
   width: 100%; }
 
-#inquiries-form label {
+.inquiries-form label {
   font-family: "termina", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -1481,16 +1491,17 @@ Mastheads
   font-size: 0.875rem;
   margin-bottom: 5px; }
 
-#inquiries-form input:not([type="submit"]), #inquiries-form textarea {
+.inquiries-form input:not([type="submit"]), .inquiries-form textarea {
   margin-bottom: 1em;
   border: none;
   border-bottom: 2px solid #d8d4bf;
   background-color: #46003c;
   color: #d8d4bf;
   border-radius: 0;
-  padding: 10px; }
+  padding: 10px !important;
+  height: auto; }
 
-#inquiries-form .animated-submit {
+.inquiries-form button[type="submit"] {
   text-decoration: none;
   font-family: "termina", sans-serif;
   font-weight: 600;
@@ -1505,7 +1516,7 @@ Mastheads
   font-size: 1.25rem;
   padding-left: 0;
   padding-right: 0; }
-  #inquiries-form .animated-submit::after {
+  .inquiries-form button[type="submit"]::after {
     content: " ";
     background-color: #d8d4bf;
     width: 0;
@@ -1516,20 +1527,34 @@ Mastheads
     overflow: hidden;
     -webkit-transition: width .25s ease-in-out;
     transition: width .25s ease-in-out; }
-  #inquiries-form .animated-submit .link-arrow {
+  .inquiries-form button[type="submit"] .link-arrow {
     display: inline-block;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
     opacity: 0;
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out; }
-  #inquiries-form .animated-submit:hover .link-arrow {
+  .inquiries-form button[type="submit"]:hover .link-arrow {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     opacity: 1; }
-  #inquiries-form .animated-submit:hover::after {
+  .inquiries-form button[type="submit"]:hover::after {
     width: 100%;
     left: 0; }
+  .inquiries-form button[type="submit"]::before {
+    content: "→";
+    display: inline-block;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    opacity: 0;
+    position: absolute;
+    right: -30px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out; }
+  .inquiries-form button[type="submit"]:hover::before {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; }
 
 /*---- Menu Sub Nav ----*/
 .subnav .container {

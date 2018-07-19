@@ -25,17 +25,9 @@
 					</div>
 				</div>
 				<div class="right-column">
-					<form id="inquiries-form">
-						<label for="your-name">Your Name</label>
-						<input id="your-name" type="text" required>
-						<label for="email">E-mail</label>
-						<input id="email" type="email" required>
-						<label for="phone-number">Phone Number</label>
-						<input id="phone-number" type="tel" placeholder="713-123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
-						<label for="request">Request:</label>
-						<textarea id="request" rows="5" placeholder="Let us know how we can help."></textarea>
-						<button type="submit" class="animated-submit">Submit <span class="link-arrow">→</span></button>
-					</form>	
+					<div class="inquiries-form">
+						<?php advanced_form('form_5b50ceb714345'); ?>
+					</div>
 				</div>
 			</div>
       
