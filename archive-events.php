@@ -9,12 +9,24 @@
 
 get_header();
 ?>
-<div class="container blog-grid">
+<?php $masthead_image = get_field('background_image');
+	if($masthead_image) : ?>
+		<div class="masthead masthead--page" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed center/cover;">
+	<?php else : ?>
+		<div class="masthead masthead--page">
+	<?php endif; ?>
+		<div class="masthead__content">
+			<div class="grid-wrapper">
+				<h1 class="masthead__title">Events</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
-
+			
 			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
@@ -38,7 +50,7 @@ get_header();
 
 			the_posts_navigation();
 
-		else :
+			else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
@@ -49,6 +61,9 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar(); ?>
-</div>
-<?php get_footer();
+//get_sidebar(); ?>
+		</div>
+
+
+<?php
+get_footer();

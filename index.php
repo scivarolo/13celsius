@@ -27,7 +27,7 @@ get_header();
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container blog-grid">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 

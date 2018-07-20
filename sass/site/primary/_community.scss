@@ -1,0 +1,49 @@
+@media (min-width: 800px) {
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 3em;
+  }
+}
+
+.widget-title {
+  @include font-size(2);
+}
+
+.widget ul {
+  margin: 0 0 1.5em 0;
+}
+
+.post .entry-footer {
+  font-size: 75%;
+
+  span {
+    margin-right: 1em;
+  }
+}
+
+.masthead__date,
+.entry-date {
+  @include termina();
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.masthead__date {
+  margin-bottom: 1em;
+}
+
+.entry-title {
+  @include matrix-extended();
+  font-size: 200%;
+  margin: 0;
+}
+.entry-content {
+  margin-top: 0;
+}
+
+article.post {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid rgba($celsius-white, .25);
+}

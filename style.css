@@ -1798,6 +1798,48 @@ Mastheads
   .wine-bottle.available::after {
     background-color: #d8d4bf; }
 
+@media (min-width: 800px) {
+  .blog-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 3em; } }
+
+.widget-title {
+  font-size: 20px;
+  font-size: 1.25rem; }
+
+.widget ul {
+  margin: 0 0 1.5em 0; }
+
+.post .entry-footer {
+  font-size: 75%; }
+  .post .entry-footer span {
+    margin-right: 1em; }
+
+.masthead__date,
+.entry-date {
+  font-family: "termina", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.15em; }
+
+.masthead__date {
+  margin-bottom: 1em; }
+
+.entry-title {
+  font-family: "matrix-ii-ext-semi-wide";
+  font-weight: 400;
+  font-size: 200%;
+  margin: 0; }
+
+.entry-content {
+  margin-top: 0; }
+
+article.post {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid rgba(216, 212, 191, 0.25); }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
