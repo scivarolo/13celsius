@@ -32,7 +32,7 @@
 			</div>
       
 		</div>
-		<div class="image-section" style="--background-url: url('https://picsum.photos/1920/1080/?random');">
+		<div class="image-section" style="--background-url: url('https://picsum.photos/1920/1080/?random&blur');">
 			
 		</div>
     

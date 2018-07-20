@@ -62,10 +62,10 @@ get_header();
 								</div>
 							</div>
 						</div>
-						<div class="home-block --dark --has-bg-image" style="--background-url: url('https://picsum.photos/1920/1080/?random');">
+						<div class="home-block --dark --has-bg-image" style="--background-url: url('https://picsum.photos/1920/1080/?random&blur');">
 							<div class="home-block__wrapper container">
 								<div class="home-block__heading">
-									<h2>Philosophia</h2>
+									<h2>Menu</h2>
 								</div>
 								<div class="home-block__content">
 									<p>At 13, it is our mission to select wines of unique character and superior quality from all over the world. We store these wines in a climate-controlled cellar at 13 degrees celsius and serve them to our patrons by the bottle, glass, half-glass and taste.</p>
