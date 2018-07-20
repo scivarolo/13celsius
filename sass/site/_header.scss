@@ -59,10 +59,12 @@ Mastheads
   line-height: 1.2;
   @include font-size(4);
   margin: 0 0 .25em;
+  max-width: 800px;
 }
 
 .masthead__intro {
   line-height: 1.6;
+  max-width: 800px;
 }
 
 @media (min-width: 800px) {

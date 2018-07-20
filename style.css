@@ -899,10 +899,12 @@ Mastheads
   line-height: 1.2;
   font-size: 40px;
   font-size: 2.5rem;
-  margin: 0 0 .25em; }
+  margin: 0 0 .25em;
+  max-width: 800px; }
 
 .masthead__intro {
-  line-height: 1.6; }
+  line-height: 1.6;
+  max-width: 800px; }
 
 @media (min-width: 800px) {
   .masthead__title {
