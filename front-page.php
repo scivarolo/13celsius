@@ -40,8 +40,7 @@ get_header();
 						<img class="masthead__logo" alt="13 Celsius" src="<?php echo get_template_directory_uri(); ?>/images/celsiuslogo.svg" />
 						<div class="masthead__details">
 							<div class="masthead__location">
-								<p>3000 Caroline</p>
-								<p>Houston, TX 77004</p>
+								<p><?php the_field('address', 'site_options'); ?></p>
 							</div>
 							<div class="masthead__hours">
 								<p>Monday–Saturday 4 pm–2 am</p>

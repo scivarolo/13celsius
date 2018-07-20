@@ -18,12 +18,17 @@
 			<div class="container">
 				<div class="footer-hours">
 					<h2 class="footer-label">Hours</h2>
-					<p>Monday–Saturday<br>4 pm–2 am</p>
-					<p>Sunday<br>1 pm–2 am</p>
+					<?php if(have_rows('hours', 'site_options') ) : 
+						while(have_rows('hours', 'site_options') ) : the_row(); ?>
+					<p><?php the_sub_field('days'); ?><br><?php the_sub_field('time'); ?></p>
+					<?php endwhile; ?>
+					<?php endif; ?>
+					
 				</div>
 				<div class="footer-location">
 					<h2 class="footer-label">Location</h2>
-					<p>3000 Caroline<br>Houston, TX 77004</p>
+					<p><?php the_field('address', 'site_options'); ?></p>
+					
 					<p><img src="<?php echo get_template_directory_uri(); ?>/images/map-temp.png" /></p>
 					<p><a href="mailto:<?php echo antispambot( 'info@13celsius.com' ); ?>"><?php echo antispambot('info@13celsius.com'); ?></a></p>
 				</div>
@@ -67,9 +72,9 @@
 					<div class="footer-wordmark">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/wordmark.svg" />
 					</div>	
-					<?php if(have_rows('social_media', 'site_footer')): ?>
+					<?php if(have_rows('social_media', 'site_options')): ?>
 						<ul class="social-icons">
-							<?php while(have_rows('social_media', 'site_footer')): the_row(); ?>
+							<?php while(have_rows('social_media', 'site_options')): the_row(); ?>
 								<li class="social-icon">
 									<a href="<?php the_sub_field('url'); ?>">
 										<?php the_sub_field('icon'); ?>

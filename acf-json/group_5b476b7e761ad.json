@@ -1,7 +1,89 @@
 {
     "key": "group_5b476b7e761ad",
-    "title": "Site Footer",
+    "title": "Site Options",
     "fields": [
+        {
+            "key": "field_5b5257ca97c9b",
+            "label": "Hours",
+            "name": "hours",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5b5257e397c9c",
+                    "label": "Day(s)",
+                    "name": "days",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b5257ef97c9d",
+                    "label": "Time",
+                    "name": "time",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5b52588411c7d",
+            "label": "Address",
+            "name": "address",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": "br"
+        },
         {
             "key": "field_5b4773576d0c9",
             "label": "Social Media",
@@ -15,6 +97,7 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "collapsed": "",
             "min": 0,
             "max": 0,
@@ -743,7 +826,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-site-footer"
+                "value": "acf-options-site-options"
             }
         ]
     ],
@@ -757,5 +840,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1531409442
+    "modified": 1532123310
 }
