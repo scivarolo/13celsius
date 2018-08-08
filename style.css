@@ -1842,6 +1842,18 @@ article.post {
   padding-bottom: 2em;
   border-bottom: 1px solid rgba(216, 212, 191, 0.25); }
 
+.event-details {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.event-detail h3 {
+  margin-bottom: 0; }
+
+.event-detail p {
+  margin-top: 0;
+  font-size: 125%; }
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/

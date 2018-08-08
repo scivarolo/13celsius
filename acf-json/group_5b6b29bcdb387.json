@@ -16,8 +16,8 @@
                 "id": ""
             },
             "hide_admin": 0,
-            "display_format": "F j, Y g:i a",
-            "return_format": "F j, Y g:i a",
+            "display_format": "F j, Y, g:i a",
+            "return_format": "F j, Y, g:i a",
             "first_day": 1
         },
         {
@@ -100,5 +100,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1533764744
+    "modified": 1533766097
 }
