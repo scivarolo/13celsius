@@ -77,7 +77,19 @@
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+	.current-menu-ancestor > a,
+	.current_page_parent > a
+	{
+		&::after { 
+			content:" ";
+			background-color: $celsius-white;
+			height: 2px;
+			bottom: -5px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			width: 100%;
+		}
 	}
 }
 

@@ -252,3 +252,14 @@ function sort_events_by_custom_field($query) {
 		$query->set( 'order', 'ASC');
 	}
 }
+
+function events_nav_classes( $classes, $item ) {
+	if( ( is_post_type_archive('events') || is_singular('events') ) && $item->title == 'Community' ) {
+		$classes = array_diff($classes, array('current_page_parent') );
+	}
+	if( ( is_post_type_archive('events') || is_singular('events') ) && $item->title == 'Events' ) {
+		$classes[] = 'current_page_parent';
+	}
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'events_nav_classes', 10, 2 );

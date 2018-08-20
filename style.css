@@ -652,6 +652,19 @@ a {
     .main-navigation a:hover::after {
       width: 100%;
       left: 0; }
+  .main-navigation .current_page_item > a::after,
+  .main-navigation .current-menu-item > a::after,
+  .main-navigation .current_page_ancestor > a::after,
+  .main-navigation .current-menu-ancestor > a::after,
+  .main-navigation .current_page_parent > a::after {
+    content: " ";
+    background-color: #d8d4bf;
+    height: 2px;
+    bottom: -5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%; }
 
 /* Small menu. */
 .menu-toggle,
