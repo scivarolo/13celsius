@@ -441,7 +441,7 @@ html {
           box-sizing: inherit; }
 
 body {
-  background: #1d0019;
+  background: #0a0109;
   /* Fallback for when there is no custom background color defined. */ }
 
 hr {
@@ -687,7 +687,7 @@ a {
   transition: .125s all ease-in-out; }
   .toggled .menu-toggle, .menu-toggle:hover, .menu-toggle:active, .menu-toggle:focus {
     background-color: #d8d4bf;
-    color: #1d0019; }
+    color: #0a0109; }
 
 @media screen and (max-width: 52em) {
   .main-navigation ul {
@@ -702,11 +702,11 @@ a {
     float: none;
     width: 100%; }
   .main-navigation a {
-    color: #1d0019; }
+    color: #0a0109; }
     .main-navigation a:hover, .main-navigation a:active, .main-navigation a:focus {
-      color: #500045; }
+      color: #380633; }
   .current-menu-item {
-    background-color: #500045; }
+    background-color: #380633; }
     .current-menu-item a {
       color: #d8d4bf; } }
 
@@ -767,7 +767,7 @@ a {
     clip: auto !important;
     -webkit-clip-path: none;
             clip-path: none;
-    color: #1d0019;
+    color: #0a0109;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -869,7 +869,7 @@ Mastheads
   width: 100vw;
   max-width: 100%;
   position: relative;
-  background-color: #37002f;
+  background-color: #21031e;
   background-blend-mode: multiply; }
 
 .masthead--home {
@@ -979,12 +979,12 @@ Mastheads
 /*------- Footer Details --------*/
 .--light {
   background-color: #d8d4bf;
-  color: #1d0019; }
+  color: #0a0109; }
   .--light a {
-    color: #1d0019; }
+    color: #0a0109; }
 
 .--medium {
-  background-color: #500045; }
+  background-color: #380633; }
 
 .footer-hours {
   margin-bottom: 1em; }
@@ -1041,7 +1041,7 @@ Mastheads
       grid-template-columns: 1fr 1.5fr 1.5fr; } }
 
 .footer-family-old img svg {
-  color: #1d0019; }
+  color: #0a0109; }
 
 .family-logo {
   text-align: center; }
@@ -1253,9 +1253,9 @@ Mastheads
     font-size: 1.25rem; } }
 
 .home-block.--has-bg-image {
-  background-color: #500045;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(29, 0, 25, 0.65)), to(rgba(29, 0, 25, 0.65))), var(--background-url);
-  background: linear-gradient(to top, rgba(29, 0, 25, 0.65), rgba(29, 0, 25, 0.65)), var(--background-url);
+  background-color: #380633;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(10, 1, 9, 0.65)), to(rgba(10, 1, 9, 0.65))), var(--background-url);
+  background: linear-gradient(to top, rgba(10, 1, 9, 0.65), rgba(10, 1, 9, 0.65)), var(--background-url);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center; }
@@ -1324,7 +1324,7 @@ Mastheads
 
 .home-event__date {
   background-color: #d8d4bf;
-  color: #1d0019;
+  color: #0a0109;
   width: 75px;
   height: 75px;
   text-align: center;
@@ -1413,9 +1413,9 @@ Mastheads
   height: 40vw; }
 
 .image-section {
-  background-color: #500045;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(29, 0, 25, 0.25)), to(rgba(29, 0, 25, 0.25))), var(--background-url);
-  background: linear-gradient(to top, rgba(29, 0, 25, 0.25), rgba(29, 0, 25, 0.25)), var(--background-url);
+  background-color: #380633;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(10, 1, 9, 0.25)), to(rgba(10, 1, 9, 0.25))), var(--background-url);
+  background: linear-gradient(to top, rgba(10, 1, 9, 0.25), rgba(10, 1, 9, 0.25)), var(--background-url);
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center; }
@@ -1527,7 +1527,7 @@ Mastheads
   margin-bottom: 1em;
   border: none;
   border-bottom: 2px solid #d8d4bf;
-  background-color: #46003c;
+  background-color: #2f052a;
   color: #d8d4bf;
   border-radius: 0;
   padding: 10px !important;
@@ -1655,7 +1655,7 @@ Mastheads
   padding: 6vw 0; }
 
 .menu-section:nth-child(even) {
-  background-color: #2c0026; }
+  background-color: #180216; }
 
 @media (min-width: 800px) {
   .menu-section .container {
@@ -1742,7 +1742,7 @@ Mastheads
   -webkit-transition: background-color .125s ease-in-out;
   transition: background-color .125s ease-in-out; }
   .wine-row:hover {
-    background-color: #3c0033; }
+    background-color: #260422; }
 
 .wine-name,
 .wine-type,
