@@ -5,8 +5,9 @@
 	//width: 100%;
   float: right;
   @include termina-bold();
-  letter-spacing: 2px;
-  text-transform: uppercase;
+	letter-spacing: 1px;
+	@include font-size(1.4);
+  text-transform: capitalize;
 	ul {
 		display: none;
 		list-style: none;

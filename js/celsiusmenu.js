@@ -96,9 +96,13 @@ function drawMenu(wineList) {
     sectionDiv.classList.add('menu-section');
     let sectionDivContainer = document.createElement('div');
     sectionDivContainer.classList.add('container');
-    sectionHeader = document.createElement('h2');
-    sectionHeader.classList.add('menu-section-header');
-    sectionHeader.innerHTML = section[0].section;
+    
+    sectionHeaderWrapper = document.createElement('header');
+    sectionHeaderWrapper.classList.add('menu-section-header')
+
+    sectionHeading = document.createElement('h2');
+    sectionHeading.classList.add('menu-section-heading');
+    sectionHeading.innerHTML = section[0].section;
     //TODO: Replace description with description from Google Sheet.
     let sectionDescription = document.createElement('p');
     sectionDescription.classList.add('menu-section__desc');
@@ -106,8 +110,9 @@ function drawMenu(wineList) {
 
     // add sectionHeader to sectionDivContainer
     sectionDiv.appendChild(sectionDivContainer);
-    sectionDivContainer.appendChild(sectionHeader);
-    sectionDivContainer.appendChild(sectionDescription);
+    sectionDivContainer.appendChild(sectionHeaderWrapper);
+    sectionHeaderWrapper.appendChild(sectionHeading);
+    sectionHeaderWrapper.appendChild(sectionDescription);
     // create subcat
     for (let j = 1; j < section.length; j++) {
       let subCat = section[j];

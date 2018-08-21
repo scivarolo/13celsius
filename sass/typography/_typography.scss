@@ -8,12 +8,12 @@ textarea {
   @include matrix-ii();
 	@include font-size(1.6);
 	line-height: $font__line-height-body;
-	@media (min-width: 800px) {
-		@include font-size(1.8);
-	}
-	@media (min-width: 1200px) {
-		@include font-size(2);
-	}
+	// @media (min-width: 800px) {
+	// 	@include font-size(1.8);
+	// }
+	// @media (min-width: 1200px) {
+	// 	@include font-size(2);
+	// }
 }
 
 @import "headings";
