@@ -246,10 +246,20 @@ if( function_exists('acf_add_options_page') ) {
 
 add_action( 'pre_get_posts', 'sort_events_by_custom_field');
 function sort_events_by_custom_field($query) {
+
+	$meta_query = array(
+		array(
+			'key' => 'event_date',
+			'value' => date('Y-m-d h:i:s'),
+			'compare' => '>=',
+		),
+	);
+
 	if( is_post_type_archive('events') && !is_admin() && $query->is_main_query()) {
 		$query->set( 'orderby', 'meta_value');
 		$query->set( 'meta_key', 'event_date');
 		$query->set( 'order', 'ASC');
+		$query->set( 'meta_query', $meta_query );
 	}
 }
 

@@ -104,49 +104,47 @@ $block-break: 'min-width: 600px';
     @include font-size(2.4);
   }
 }
-.home-events__list {
+.home-events__list,
+.archive-events__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid; 
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
   //grid-auto-flow: column;
   grid-gap: 3em;
 }
 
-.home-event {
+.home-event,
+.archive-event {
   //margin-bottom: 1em;
   border-top: 2px solid $celsius-white;
   
 }
-.home-event__date {
+.home-event__date,
+.archive-event__date {
   background-color: $celsius-white;
   color: $celsius-purple;
-  width: 75px;
-  height: 75px;
-  text-align: center;
-  padding-top: 10px;
-  margin: 0 15px 15px 0;
-  float: left;
-}
-.date__month,
-.date__day {
-  display: block;
-}
-
-.date__month {
-  @include termina-bold();
-}
-.date__day {
-  @include font-size(3);
-  line-height: .7;
+  padding: 7px 10px;
+  margin-bottom: 0px;
+  display: inline-block;
+  @include termina();
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  @include font-size(1.3);
 }
 
 .event__heading, .event__description {
   clear: none;
 }
 
-
+.archive-event .event__heading {
+  margin-top: .5em;
+  @include matrix-extended();
+  @include font-size(2.6);
+}
 
 .page-section--history .container {
   @media ($block-break) {

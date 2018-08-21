@@ -9,7 +9,7 @@
 
 get_header();
 ?>
-<?php $masthead_image = get_field('background_image');
+<?php $masthead_image = get_field('background_image', 2);
 	if($masthead_image) : ?>
 		<div class="masthead masthead--page" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed center/cover;">
 	<?php else : ?>
@@ -27,12 +27,7 @@ get_header();
 
 		<?php if ( have_posts() ) : ?>
 			
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+		<ul class="archive-events__list">
 
 			<?php
 			/* Start the Loop */
@@ -43,12 +38,21 @@ get_header();
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+				 */ ?>
+				<li class="archive-event">
+					<div class="archive-event__date">
+						<?php the_field('event_date'); ?>
+					</div>
+					<h3 class="event__heading"><?php the_title(); ?></h3>
+					<p class="event__description"><?php the_excerpt(); ?></p>
+					<?php //get_template_part( 'template-parts/content', get_post_type() ); ?>
+				</li>
 
-			endwhile;
+			<?php endwhile; ?>
 
-			the_posts_navigation();
+		</ul>
+
+			<?php the_posts_navigation();
 
 			else :
 

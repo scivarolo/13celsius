@@ -1291,42 +1291,45 @@ Mastheads
       font-size: 24px;
       font-size: 1.5rem; } }
 
-.home-events__list {
+.home-events__list,
+.archive-events__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 3em; }
+  @media (min-width: 800px) {
+    .home-events__list,
+    .archive-events__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr; } }
 
-.home-event {
+.home-event,
+.archive-event {
   border-top: 2px solid #d8d4bf; }
 
-.home-event__date {
+.home-event__date,
+.archive-event__date {
   background-color: #d8d4bf;
   color: #0a0109;
-  width: 75px;
-  height: 75px;
-  text-align: center;
-  padding-top: 10px;
-  margin: 0 15px 15px 0;
-  float: left; }
-
-.date__month,
-.date__day {
-  display: block; }
-
-.date__month {
+  padding: 7px 10px;
+  margin-bottom: 0px;
+  display: inline-block;
   font-family: "termina", sans-serif;
-  font-weight: 600; }
-
-.date__day {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: .7; }
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  font-size: 0.8125rem; }
 
 .event__heading, .event__description {
   clear: none; }
+
+.archive-event .event__heading {
+  margin-top: .5em;
+  font-family: "matrix-ii-ext-semi-wide";
+  font-weight: 400;
+  font-size: 26px;
+  font-size: 1.625rem; }
 
 @media (min-width: 600px) {
   .page-section--history .container {

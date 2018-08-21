@@ -73,77 +73,49 @@ get_header();
 								</div>
 							</div>
 						</div>
+
+						<?php $posts = get_posts(array(
+							'numberposts' => 6,
+							'post_type' => 'events',
+							'orderby' => 'meta_value',
+							'order' => 'ASC',
+							'meta_key' => 'event_date',
+							'meta_query' => array(
+									array(
+										'key' => 'event_date',
+										'value' => date('Y-m-d h:i:s'),
+										'compare' => '>=',
+									),
+								),
+							)); ?>
+
+						<?php if($posts): ?>
+
 						<div class="home-events container">
 							<div class="home-events__wrapper">
 								<h2 class="home-events__heading">Events</h2>
 								<ul class="home-events__list">
+
+									<?php foreach($posts as $post) : setup_postdata($post); ?>
+
 									<li class="home-event">
 										<div class="home-event__date">
-											<span class="date__month">NOV</span>
-											<span class="date__day">23</span>
+											<?php the_field('event_date'); ?>
 										</div>
-										<h3 class="event__heading">Portuguese Wine Week</h3>
-										<p class="event__description">Join us for Portuguese wine week.</p>
+										<h3 class="event__heading"><?php the_title(); ?></h3>
+										<p class="event__description"><?php the_excerpt(); ?></p>
 									</li>
-									<li class="home-event">
-										<div class="home-event__date">
-											<span class="date__month">NOV</span>
-											<span class="date__day">23</span>
-										</div>
-										<h3 class="event__heading">Portuguese Wine Week</h3>
-										<p class="event__description">Join us for Portuguese wine week.</p>
-									</li>
-									<li class="home-event">
-										<div class="home-event__date">
-											<span class="date__month">NOV</span>
-											<span class="date__day">23</span>
-										</div>
-										<h3 class="event__heading">Portuguese Wine Week</h3>
-										<p class="event__description">Join us for Portuguese wine week.</p>
-									</li>
-									<li class="home-event">
-										<div class="home-event__date">
-											<span class="date__month">NOV</span>
-											<span class="date__day">16</span>
-										</div>
-										<h3 class="event__heading">Portuguese Wine Week</h3>
-										<p class="event__description">Join us for Portuguese wine week.</p>
-									</li>
-									<li class="home-event">
-										<div class="home-event__date">
-											<span class="date__month">NOV</span>
-											<span class="date__day">23</span>
-										</div>
-										<h3 class="event__heading">Portuguese Wine Week</h3>
-										<p class="event__description">Join us for Portuguese wine week.</p>
-									</li>
-									<li class="home-event">
-										<div class="home-event__date">
-											<span class="date__month">NOV</span>
-											<span class="date__day">23</span>
-										</div>
-										<h3 class="event__heading">Portuguese Wine Week</h3>
-										<p class="event__description">Join us for Portuguese wine week.</p>
-									</li>
-									<li class="home-event">
-										<div class="home-event__date">
-											<span class="date__month">NOV</span>
-											<span class="date__day">23</span>
-										</div>
-										<h3 class="event__heading">Portuguese Wine Week</h3>
-										<p class="event__description">Join us for Portuguese wine week.</p>
-									</li>
-									<li class="home-event">
-										<div class="home-event__date">
-											<span class="date__month">NOV</span>
-											<span class="date__day">16</span>
-										</div>
-										<h3 class="event__heading">Portuguese Wine Week</h3>
-										<p class="event__description">Join us for Portuguese wine week.</p>
-									</li>
+
+									<?php endforeach; ?>
+
+									
 								</ul>
 							</div>
 						</div>
+
+							<?php wp_reset_postdata();
+							endif; ?>
+
          		<?php
          		// the_content();
 
