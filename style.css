@@ -973,64 +973,41 @@ Mastheads
 .footer-hours {
   margin-bottom: 1em; }
 
-.footer-hours p {
+.footer-details p {
   font-family: "matrix-ii", serif;
   font-weight: 700;
-  font-size: 46px;
-  font-size: 2.875rem;
+  font-size: 30px;
+  font-size: 1.875rem;
   margin-top: 0;
-  margin-bottom: .75em;
+  margin-bottom: 1em;
   line-height: 1.2; }
 
 .footer-label {
   text-transform: uppercase;
   letter-spacing: .15em;
-  font-size: 18px;
-  font-size: 1.125rem; }
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-top: 4em; }
 
-.footer-location {
-  font-family: "termina", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  font-size: 1.5rem; }
-
-.footer-family {
-  max-width: 500px; }
-  .footer-family .family-logo {
-    width: 50%;
-    float: left; }
-
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   .footer-details .container {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 10%; }
-  .footer-hours {
-    grid-row: 1 / span 1; }
-  .footer-location {
-    grid-row: 1 / span 2; }
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%; } }
+
+@media (min-width: 1000px) {
+  .footer-details .container {
+    grid-template-columns: 1fr 1fr 1fr; }
+    .footer-details .container > div {
+      margin-top: -3em; }
   .footer-family {
-    grid-row: 2 / span 1; } }
+    grid-column: 3; }
+  .footer-hours,
+  .footer-location {
+    grid-row: span 2; } }
 
-.footer-family-old .footer-label {
-  text-align: center; }
-
-.footer-family-old .container {
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  @media (min-width: 600px) {
-    .footer-family-old .container {
-      grid-template-columns: 1fr 1.5fr 1.5fr; } }
-
-.footer-family-old img svg {
-  color: #0a0109; }
-
-.family-logo {
-  text-align: center; }
-  .family-logo img {
-    max-width: 400px; }
+.family-logo img {
+  max-width: 250px; }
 
 /*------- Main Footer Section -------*/
 .footer-section__main .container {
@@ -1196,17 +1173,20 @@ Mastheads
       padding: 8vw 0; } }
 
 @media (min-width: 600px) {
-  .home-block:nth-of-type(even) .home-block__heading {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    text-align: right; } }
+  .home-block:nth-of-type(even) .home-block__wrapper {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; } }
 
 @media (min-width: 600px) {
   .home-block__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 400px; } }
 
 @media (min-width: 600px) {
@@ -1224,8 +1204,8 @@ Mastheads
 
 @media (min-width: 1000px) {
   .home-block__heading {
-    font-size: 20px;
-    font-size: 1.25rem; }
+    font-size: 14px;
+    font-size: 0.875rem; }
   .home-block__content {
     font-size: 18px;
     font-size: 1.125rem; } }

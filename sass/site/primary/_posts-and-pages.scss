@@ -37,9 +37,8 @@ $block-break: 'min-width: 600px';
 
 @media ($block-break) {
   .home-block:nth-of-type(even) {
-    .home-block__heading {
-      order: 2;
-      text-align: right;
+    .home-block__wrapper {
+      align-items: flex-end;
     }
   }
 }
@@ -47,7 +46,7 @@ $block-break: 'min-width: 600px';
 .home-block__wrapper {
   @media ($block-break) {
     display: flex;
-    //align-items: center;
+    flex-direction: column;
     min-height: 400px;
   }
 }
@@ -70,7 +69,7 @@ $block-break: 'min-width: 600px';
 
 @media (min-width: 1000px) {
   .home-block__heading {
-    @include font-size(2);
+    @include font-size(1.4);
   }
   .home-block__content {
     @include font-size(1.8);
