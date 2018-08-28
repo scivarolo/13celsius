@@ -318,9 +318,10 @@ $block-break: 'min-width: 600px';
   }
   label {
     @include termina();
+    font-weight: 400!important;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    @include font-size(1.4);
+    @include font-size(1);
     margin-bottom: 5px;
   }
   input:not([type="submit"]), textarea {
@@ -332,9 +333,15 @@ $block-break: 'min-width: 600px';
     border-radius: 0;
     padding: 10px !important;
     height: auto;
+    transition: all .125s ease-in-out;
+    &:focus {
+      background-color: lighten($celsius-purple, 15%);
+      
+      outline: none;
+    }
   }
   button[type="submit"] {
-    @include link-animation();
+    @include link-underline();
     color: $celsius-white;
     background: none;
     border: none;
