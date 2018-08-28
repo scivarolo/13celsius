@@ -1320,18 +1320,19 @@ Mastheads
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 1.2;
-  font-size: 50px;
-  font-size: 3.125rem; }
+  font-size: 30px;
+  font-size: 1.875rem; }
   @media (min-width: 1000px) {
     .section__header {
-      font-size: 84px;
-      font-size: 5.25rem; } }
+      font-size: 50px;
+      font-size: 3.125rem; } }
 
 .history__header {
-  grid-column: 2 / span 11;
+  grid-column: 1 / span 11;
   grid-row: 1 / span 2;
   -ms-flex-item-align: center;
-      align-self: center; }
+      align-self: center;
+  margin-bottom: 2em; }
 
 .image1 {
   grid-column: 6 / span 7;
@@ -1346,26 +1347,26 @@ Mastheads
 .history__intro {
   font-family: "termina", sans-serif;
   font-weight: 600;
-  font-size: 20px;
-  font-size: 1.25rem;
-  grid-column: 4 / span 6;
+  font-size: 18px;
+  font-size: 1.125rem;
+  grid-column: 6 / span 6;
   grid-row: 5 / span 1; }
   @media (min-width: 1000px) {
     .history__intro {
-      font-size: 26px;
-      font-size: 1.625rem; } }
+      font-size: 22px;
+      font-size: 1.375rem; } }
 
 .history__content {
   grid-column: 6 / span 6;
   grid-row: 6 / span 6; }
   @media (min-width: 600px) {
     .history__content {
-      font-size: 18px;
-      font-size: 1.125rem; } }
+      font-size: 16px;
+      font-size: 1rem; } }
   @media (min-width: 1200px) {
     .history__content {
-      font-size: 20px;
-      font-size: 1.25rem; } }
+      font-size: 18px;
+      font-size: 1.125rem; } }
 
 /*--------- image section ---------*/
 .image-section {
@@ -1389,15 +1390,9 @@ Mastheads
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2em; }
 
-.person {
-  -ms-flex-preferred-size: 380px;
-      flex-basis: 380px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1; }
-  @media (max-width: 600px) {
-    .person {
-      grid-column: 1 / span 2; } }
+@media (max-width: 600px) {
+  .person {
+    grid-column: 1 / span 2; } }
 
 .person__name {
   font-family: "matrix-ii", serif;
@@ -1405,20 +1400,20 @@ Mastheads
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0;
-  font-size: 25px;
-  font-size: 1.5625rem; }
+  font-size: 22px;
+  font-size: 1.375rem; }
   @media (min-width: 1000px) {
     .person__name {
-      font-size: 30px;
-      font-size: 1.875rem; } }
+      font-size: 26px;
+      font-size: 1.625rem; } }
 
 .person__title {
   font-family: "termina", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-size: 16px;
-  font-size: 1rem; }
+  font-size: 13px;
+  font-size: 0.8125rem; }
 
 /* Person Subgrid */
 @media (min-width: 800px) {
