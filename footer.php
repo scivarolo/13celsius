@@ -85,21 +85,23 @@
 					<?php endif; ?>
 						
 				</div>
-				<div class="footer-newsletter">
-					<label for="newsletter">Sign up for our newsletter</label>
-					<input type="text" id="newsletter" />
+				<div class="footer-middle">
+					<div class="footer-newsletter">
+						<label for="newsletter">Sign up for our newsletter</label>
+						<input type="text" id="newsletter" />
+					</div>
+					<div class="footer-nav">
+						<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+						) );
+						?>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="footer-nav">
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</div>
-			
+				
 		<div class="site-info">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
