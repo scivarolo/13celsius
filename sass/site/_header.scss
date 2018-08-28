@@ -37,7 +37,7 @@ Mastheads
   display: flex;
   flex-direction: column;
   @media (min-width: 800px) {
-    min-height: 650px;
+    min-height: 450px;
   }
 }
 
@@ -46,16 +46,16 @@ Mastheads
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   display: flex;
   flex: 1;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .masthead__title {
   @include termina-bold();
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: .25em;
   line-height: 1.2;
   @include font-size(2.2);
   margin: 0 0 .25em;

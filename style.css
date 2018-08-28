@@ -562,10 +562,10 @@ a {
 .main-navigation {
   float: right;
   font-family: "termina", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: capitalize; }
   .main-navigation ul {
     display: none;
@@ -605,34 +605,19 @@ a {
     display: block;
     text-decoration: none;
     text-decoration: none;
-    font-family: "termina", sans-serif;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
     position: relative;
     cursor: pointer; }
     .main-navigation a::after {
       content: " ";
       background-color: #d8d4bf;
       width: 0;
-      height: 2px;
+      height: 1px;
       position: absolute;
       bottom: -5px;
       right: 0;
       overflow: hidden;
       -webkit-transition: width .25s ease-in-out;
       transition: width .25s ease-in-out; }
-    .main-navigation a .link-arrow {
-      display: inline-block;
-      -webkit-transform: translateX(-50%);
-              transform: translateX(-50%);
-      opacity: 0;
-      -webkit-transition: all .25s ease-in-out;
-      transition: all .25s ease-in-out; }
-    .main-navigation a:hover .link-arrow {
-      -webkit-transform: translateX(0);
-              transform: translateX(0);
-      opacity: 1; }
     .main-navigation a:hover::after {
       width: 100%;
       left: 0; }
@@ -643,7 +628,7 @@ a {
   .main-navigation .current_page_parent > a::after {
     content: " ";
     background-color: #d8d4bf;
-    height: 2px;
+    height: 1px;
     bottom: -5px;
     position: absolute;
     left: 0;
@@ -870,29 +855,29 @@ Mastheads
           flex-direction: column; }
   @media (min-width: 800px) {
     .masthead--page {
-      min-height: 650px; } }
+      min-height: 450px; } }
 
 .masthead__content {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding-top: 150px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
 
 .masthead__title {
   font-family: "termina", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: .25em;
   line-height: 1.2;
   font-size: 22px;
   font-size: 1.375rem;

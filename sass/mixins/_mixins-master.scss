@@ -54,6 +54,27 @@
   font-weight: 600;
 }
 
+@mixin link-underline($line-weight: 1px) {
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  &::after {
+    content: " ";
+    background-color: $celsius-white;
+    width: 0;
+    height: $line-weight;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    overflow: hidden;
+    transition: width .25s ease-in-out;
+  }
+  &:hover::after {
+    width:100%;
+    left: 0;
+  }
+}
+
 @mixin link-animation() {
   text-decoration: none;
   @include termina-bold();
