@@ -36,14 +36,14 @@ $block-break: 'min-width: 600px';
 }
 
 @media ($block-break) {
-  .home-block:nth-of-type(even) {
-    .home-block__wrapper {
+  .text-block:nth-of-type(even) {
+    .text-block__wrapper {
       align-items: flex-end;
     }
   }
 }
 
-.home-block__wrapper {
+.text-block__wrapper {
   @media ($block-break) {
     display: flex;
     flex-direction: column;
@@ -51,32 +51,33 @@ $block-break: 'min-width: 600px';
   }
 }
 
-.home-block__heading,
-.home-block__content {
+.text-block__heading,
+.text-block__content {
   @media ($block-break) {
     width: 50%;
   }
 }
 
-.home-block__heading {
+.text-block__heading {
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: .2em;
   line-height: 1;
+  @include font-size(1.2);
 }
-.home-block__content {
-  line-height: 2;
+.text-block__content {
+  line-height: 1.8;
 }
 
 @media (min-width: 1000px) {
-  .home-block__heading {
-    @include font-size(1.4);
+  .text-block__heading {
+    
   }
-  .home-block__content {
+  .text-block__content {
     @include font-size(1.8);
   }
 }
 
-.home-block.--has-bg-image {
+.text-block.--has-bg-image {
   background-color: lighten($celsius-purple, 10%);
   background: linear-gradient(to top, rgba($celsius-purple, 0.65), rgba($celsius-purple, 0.65)),
   var(--background-url);
@@ -93,14 +94,19 @@ $block-break: 'min-width: 600px';
 }
 
 .text-link {
-  @include link-animation();
+  @include link-underline(1px);
+  font-size: 75%;
+  &::after {
+    height: 1px;
+  }
 }
 
 .home-events__heading {
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: .2em;
+  margin-bottom: 2em;
   @media (min-width: 1000px) {
-    @include font-size(2.4);
+    @include font-size(1.6);
   }
 }
 .home-events__list,
@@ -205,6 +211,18 @@ $block-break: 'min-width: 600px';
 .image-section {
   min-height: 400px;
   height: 40vw;
+  &.--spacing-small {
+    min-height: 300px;
+    height: 30vw;
+  }
+  &.--spacing-medium {
+    min-height: 400px;
+    height: 40vw;
+  }
+  &.--spacing-large {
+    min-height: 500px;
+    height: 50vw;
+  }
 }
 
 .image-section {

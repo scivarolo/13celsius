@@ -30,6 +30,7 @@
   letter-spacing: .15em;
   @include font-size(1.4);
   margin-top: 4em;
+  font-weight: 400;
 }
 
 @media (min-width:600px) {
@@ -126,7 +127,9 @@
     padding: 0;
     text-align: center;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    @include termina();
+    letter-spacing: .1em;
     @include font-size(1.2);
     @media (max-width: 700px) {
       flex-wrap: wrap;
@@ -134,7 +137,7 @@
     li {
       margin: 10px;
       a {
-        @include link-animation();
+        @include link-underline(1px);
       }
     }
   }

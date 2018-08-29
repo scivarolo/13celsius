@@ -30,9 +30,10 @@
 			</div>
       
 		</div>
-		<div class="image-section" style="--background-url: url('https://picsum.photos/1920/1080/?random&blur');">
-			
-		</div>
+
+		<?php echo get_template_part('template-parts/sections', 'page'); ?>
+
+		
     <div class="page-section page-section--people">
 			<div class="container">
 				<h2 class="section__header">People</h2>

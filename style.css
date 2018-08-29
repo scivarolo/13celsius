@@ -972,7 +972,8 @@ Mastheads
   letter-spacing: .15em;
   font-size: 14px;
   font-size: 0.875rem;
-  margin-top: 4em; }
+  margin-top: 4em;
+  font-weight: 400; }
 
 @media (min-width: 600px) {
   .footer-details .container {
@@ -1049,9 +1050,11 @@ Mastheads
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-family: "termina", sans-serif;
+    font-weight: 400;
+    letter-spacing: .1em;
     font-size: 12px;
     font-size: 0.75rem; }
     @media (max-width: 700px) {
@@ -1062,34 +1065,19 @@ Mastheads
       margin: 10px; }
       .footer-nav ul li a {
         text-decoration: none;
-        font-family: "termina", sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.15em;
         position: relative;
         cursor: pointer; }
         .footer-nav ul li a::after {
           content: " ";
           background-color: #d8d4bf;
           width: 0;
-          height: 2px;
+          height: 1px;
           position: absolute;
           bottom: -5px;
           right: 0;
           overflow: hidden;
           -webkit-transition: width .25s ease-in-out;
           transition: width .25s ease-in-out; }
-        .footer-nav ul li a .link-arrow {
-          display: inline-block;
-          -webkit-transform: translateX(-50%);
-                  transform: translateX(-50%);
-          opacity: 0;
-          -webkit-transition: all .25s ease-in-out;
-          transition: all .25s ease-in-out; }
-        .footer-nav ul li a:hover .link-arrow {
-          -webkit-transform: translateX(0);
-                  transform: translateX(0);
-          opacity: 1; }
         .footer-nav ul li a:hover::after {
           width: 100%;
           left: 0; }
@@ -1158,13 +1146,13 @@ Mastheads
       padding: 8vw 0; } }
 
 @media (min-width: 600px) {
-  .home-block:nth-of-type(even) .home-block__wrapper {
+  .text-block:nth-of-type(even) .text-block__wrapper {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; } }
 
 @media (min-width: 600px) {
-  .home-block__wrapper {
+  .text-block__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1175,27 +1163,26 @@ Mastheads
     min-height: 400px; } }
 
 @media (min-width: 600px) {
-  .home-block__heading,
-  .home-block__content {
+  .text-block__heading,
+  .text-block__content {
     width: 50%; } }
 
-.home-block__heading {
+.text-block__heading {
   text-transform: uppercase;
-  letter-spacing: .1em;
-  line-height: 1; }
+  letter-spacing: .2em;
+  line-height: 1;
+  font-size: 12px;
+  font-size: 0.75rem; }
 
-.home-block__content {
-  line-height: 2; }
+.text-block__content {
+  line-height: 1.8; }
 
 @media (min-width: 1000px) {
-  .home-block__heading {
-    font-size: 14px;
-    font-size: 0.875rem; }
-  .home-block__content {
+  .text-block__content {
     font-size: 18px;
     font-size: 1.125rem; } }
 
-.home-block.--has-bg-image {
+.text-block.--has-bg-image {
   background-color: #380633;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(10, 1, 9, 0.65)), to(rgba(10, 1, 9, 0.65))), var(--background-url);
   background: linear-gradient(to top, rgba(10, 1, 9, 0.65), rgba(10, 1, 9, 0.65)), var(--background-url);
@@ -1213,45 +1200,34 @@ Mastheads
 
 .text-link {
   text-decoration: none;
-  font-family: "termina", sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 75%; }
   .text-link::after {
     content: " ";
     background-color: #d8d4bf;
     width: 0;
-    height: 2px;
+    height: 1px;
     position: absolute;
     bottom: -5px;
     right: 0;
     overflow: hidden;
     -webkit-transition: width .25s ease-in-out;
     transition: width .25s ease-in-out; }
-  .text-link .link-arrow {
-    display: inline-block;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    opacity: 0;
-    -webkit-transition: all .25s ease-in-out;
-    transition: all .25s ease-in-out; }
-  .text-link:hover .link-arrow {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    opacity: 1; }
   .text-link:hover::after {
     width: 100%;
     left: 0; }
+  .text-link::after {
+    height: 1px; }
 
 .home-events__heading {
   text-transform: uppercase;
-  letter-spacing: .1em; }
+  letter-spacing: .2em;
+  margin-bottom: 2em; }
   @media (min-width: 1000px) {
     .home-events__heading {
-      font-size: 24px;
-      font-size: 1.5rem; } }
+      font-size: 16px;
+      font-size: 1rem; } }
 
 .home-events__list,
 .archive-events__list {
@@ -1357,6 +1333,15 @@ Mastheads
 .image-section {
   min-height: 400px;
   height: 40vw; }
+  .image-section.--spacing-small {
+    min-height: 300px;
+    height: 30vw; }
+  .image-section.--spacing-medium {
+    min-height: 400px;
+    height: 40vw; }
+  .image-section.--spacing-large {
+    min-height: 500px;
+    height: 50vw; }
 
 .image-section {
   background-color: #380633;

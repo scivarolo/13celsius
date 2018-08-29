@@ -52,28 +52,9 @@ get_header();
 
          	<div class="entry-content">
 
-					  <div class="home-block --dark">
-							<div class="home-block__wrapper container">
-								<div class="home-block__heading">
-									<h2>Philosophia</h2>
-								</div>
-								<div class="home-block__content">
-									<p>At 13, it is our mission to select wines of unique character and superior quality from all over the world. We store these wines in a climate-controlled cellar at 13 degrees celsius and serve them to our patrons by the bottle, glass, half-glass and taste.</p>
-								</div>
-							</div>
-						</div>
-						<div class="home-block --dark --has-bg-image" style="--background-url: url('https://picsum.photos/1920/1080/?random&blur');">
-							<div class="home-block__wrapper container">
-								<div class="home-block__heading">
-									<h2>Menu</h2>
-								</div>
-								<div class="home-block__content">
-									<p>At 13, it is our mission to select wines of unique character and superior quality from all over the world. We store these wines in a climate-controlled cellar at 13 degrees celsius and serve them to our patrons by the bottle, glass, half-glass and taste.</p>
-									<a class="text-link">View our Menus <span class="link-arrow">→</span></a>
-								</div>
-							</div>
-						</div>
+					<?php echo get_template_part('template-parts/sections', 'page'); ?>
 
+					<!-- Events Loop -->
 						<?php $posts = get_posts(array(
 							'numberposts' => 6,
 							'post_type' => 'events',
