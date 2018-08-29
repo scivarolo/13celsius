@@ -52,6 +52,8 @@
 
 .subcategory-desc {
   margin-bottom: 0;
+  margin: 15px 10px 0;
+  @include font-size(1.5);
 }
 
 @media (min-width: 800px) {
@@ -108,15 +110,20 @@
   }
 }
 .subcategory-header {
+  padding: 1em;
   h3 {
     //font-weight: 400;
-    margin-bottom: .25em;
+    margin-top: .5em;
+    margin-bottom: .3em;
+    line-height: 1;
+    @include font-size(1.4);
     @media(min-width: 800px) {
-      @include font-size(2.2);
+      @include font-size(1.6);
     }
     text-transform: uppercase;
     letter-spacing: 0.1em;
   }
+  
 }
 
 .accordion-button {
@@ -128,9 +135,15 @@
     content: "+";
     position: absolute;
     right: 1%;
-    top: 30%;
+    top: 45%;
     line-height: 0;
     @include font-size(4);
+  }
+  &:hover {
+    background-color: lighten($celsius-purple, 10%);
+  }
+  &.active {
+    background-color: lighten($celsius-purple, 10%);
   }
   &.active::after {
     content: "-";
