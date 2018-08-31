@@ -45,7 +45,7 @@
     padding: 6vw 0;
   }
   &:nth-child(even) {
-    background-color: lighten($celsius-purple, 3%);
+    background-color: lighten($celsius-purple, 5%);
   }
 }
 
@@ -70,21 +70,25 @@
     align-items: start;
   }
   .menu-section-heading {
-    grid-column: span 5;
+    grid-column: span 6;
     line-height: 1.3;
   }
   .menu-section__desc {
-    grid-column: span 7;
-    @include font-size(2);
+    grid-column: span 6;
+    @include font-size(1.5);
+    line-height: 1.8;
     margin-top: 0;
+    @include sans();
   }
   .menu-subcategory {
     grid-column: 2 / span 10;
   }
   .subcategory-desc {
-    @include font-size(1.8);
-    width: 70%;
+    @include font-size(1.5);
+    width: 60%;
+    font-style: italic;
     margin-bottom: -1em;
+    margin-top: 1.25em;
   }
 }
 

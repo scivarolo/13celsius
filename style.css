@@ -1597,7 +1597,7 @@ Mastheads
   padding: 6vw 0; }
 
 .menu-section:nth-child(even) {
-  background-color: #180216; }
+  background-color: #21031e; }
 
 .subcategory-desc {
   margin-bottom: 0;
@@ -1620,20 +1620,25 @@ Mastheads
         -ms-flex-align: start;
             align-items: start; }
   .menu-section-heading {
-    grid-column: span 5;
+    grid-column: span 6;
     line-height: 1.3; }
   .menu-section__desc {
-    grid-column: span 7;
-    font-size: 20px;
-    font-size: 1.25rem;
-    margin-top: 0; }
+    grid-column: span 6;
+    font-size: 15px;
+    font-size: 0.9375rem;
+    line-height: 1.8;
+    margin-top: 0;
+    font-family: "commuters-sans", sans-serif;
+    font-weight: 200; }
   .menu-subcategory {
     grid-column: 2 / span 10; }
   .subcategory-desc {
-    font-size: 18px;
-    font-size: 1.125rem;
-    width: 70%;
-    margin-bottom: -1em; } }
+    font-size: 15px;
+    font-size: 0.9375rem;
+    width: 60%;
+    font-style: italic;
+    margin-bottom: -1em;
+    margin-top: 1.25em; } }
 
 .menu-section-heading {
   text-transform: uppercase;
