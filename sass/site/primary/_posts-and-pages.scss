@@ -86,9 +86,6 @@ $block-break: 'min-width: 600px';
   background-position: center;
 }
 
-
-
-
 .intro-block__content {
   @include termina();
   @media($block-break) {
