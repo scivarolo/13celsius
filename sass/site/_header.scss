@@ -53,12 +53,12 @@ Mastheads
 }
 
 .masthead__title {
-  @include sans-bold();
-  text-transform: uppercase;
-  letter-spacing: .25em;
+  @include matrix-ii();
+  //text-transform: uppercase;
+  letter-spacing: .02em;
   line-height: 1.2;
-  @include font-size(2.2);
-  margin: 0 0 .25em;
+  @include font-size(3.2);
+  margin: 0;
   max-width: 800px;
 }
 
@@ -69,7 +69,7 @@ Mastheads
 
 @media (min-width: 800px) {
   .masthead__title {
-    @include font-size(2.4);
+    @include font-size(6.4);
   }
   .masthead__intro {
     @include font-size(2);

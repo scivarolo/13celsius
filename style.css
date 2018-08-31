@@ -874,14 +874,13 @@ Mastheads
           align-items: flex-end; }
 
 .masthead__title {
-  font-family: "commuters-sans", sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .25em;
+  font-family: "matrix-ii", serif;
+  font-weight: 300;
+  letter-spacing: .02em;
   line-height: 1.2;
-  font-size: 22px;
-  font-size: 1.375rem;
-  margin: 0 0 .25em;
+  font-size: 32px;
+  font-size: 2rem;
+  margin: 0;
   max-width: 800px; }
 
 .masthead__intro {
@@ -890,8 +889,8 @@ Mastheads
 
 @media (min-width: 800px) {
   .masthead__title {
-    font-size: 24px;
-    font-size: 1.5rem; }
+    font-size: 64px;
+    font-size: 4rem; }
   .masthead__intro {
     font-size: 20px;
     font-size: 1.25rem; } }
@@ -1791,12 +1790,6 @@ Mastheads
   .wine-bottle.available::after {
     background-color: #d8d4bf; }
 
-@media (min-width: 800px) {
-  .blog-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-gap: 3em; } }
-
 .widget-title {
   font-size: 20px;
   font-size: 1.25rem; }
@@ -1820,10 +1813,30 @@ Mastheads
   margin-bottom: 1em; }
 
 .entry-title {
-  font-family: "matrix-ii-ext-semi-wide";
-  font-weight: 400;
-  font-size: 200%;
+  font-family: "matrix-ii", serif;
+  font-weight: 300;
+  font-size: 300%;
+  line-height: 1.2;
   margin: 0; }
+  .entry-title a {
+    text-decoration: none;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer; }
+    .entry-title a::after {
+      content: " ";
+      background-color: #d8d4bf;
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: -5px;
+      right: 0;
+      overflow: hidden;
+      -webkit-transition: width .25s ease-in-out;
+      transition: width .25s ease-in-out; }
+    .entry-title a:hover::after {
+      width: 100%;
+      left: 0; }
 
 .entry-content {
   margin-top: 0; }
@@ -1832,6 +1845,20 @@ article.post {
   margin-bottom: 2em;
   padding-bottom: 2em;
   border-bottom: 1px solid rgba(216, 212, 191, 0.25); }
+  @media (min-width: 800px) {
+    article.post {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: 1em; } }
+
+.entry-header {
+  grid-column: span 5; }
+
+.entry-content {
+  grid-column: span 7; }
+
+.entry-footer {
+  grid-column: span 12; }
 
 .event-details {
   margin: 0;
