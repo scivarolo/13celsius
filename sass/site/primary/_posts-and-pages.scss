@@ -279,7 +279,7 @@ $block-break: 'min-width: 600px';
   }
 }
 .person__title {
-  @include termina();
+  @include sans();
   text-transform: uppercase;
   letter-spacing: 0.1em;
   @include font-size(1.3);
