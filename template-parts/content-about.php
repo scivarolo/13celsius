@@ -40,33 +40,37 @@
 				<ul class="people__list">
 					<li class="person">
 						<img class="person__photo" src="//picsum.photos/400/400/?random&blur">
-						<h3 class="person__name">Adele Corrigan</h3>
-						<span class="person__title">General Manager &amp; Sommelier</span>
+						
 						<div class="person__bio">
+							<h3 class="person__name">Adele Corrigan</h3>
+							<span class="person__title">General Manager &amp; Sommelier</span>
 							<p>13 is housed in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004.</p>
 						</div>
 					</li>
 					<li class="person">
 						<img class="person__photo" src="//picsum.photos/400/400/?random&blur">
-						<h3 class="person__name">Adele Corrigan</h3>
-						<span class="person__title">General Manager &amp; Sommelier</span>
+						
 						<div class="person__bio">
+							<h3 class="person__name">Adele Corrigan</h3>
+							<span class="person__title">General Manager &amp; Sommelier</span>
 							<p>13 is housed in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004.</p>
 						</div>
 					</li>
 					<li class="person">
 						<img class="person__photo" src="//picsum.photos/400/400/?random&blur">
-						<h3 class="person__name">Adele Corrigan</h3>
-						<span class="person__title">General Manager &amp; Sommelier</span>
+						
 						<div class="person__bio">
+							<h3 class="person__name">Adele Corrigan</h3>
+							<span class="person__title">General Manager &amp; Sommelier</span>
 							<p>13 is housed in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004.</p>
 						</div>
 					</li>
 					<li class="person">
 						<img class="person__photo" src="//picsum.photos/400/400/?random&blur">
-						<h3 class="person__name">Adele Corrigan</h3>
-						<span class="person__title">General Manager &amp; Sommelier</span>
+						
 						<div class="person__bio">
+							<h3 class="person__name">Adele Corrigan</h3>
+							<span class="person__title">General Manager &amp; Sommelier</span>
 							<p>13 is housed in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004.</p>
 						</div>
 					</li>

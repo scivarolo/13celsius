@@ -182,9 +182,9 @@ $block-break: 'min-width: 600px';
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 1.2;
-  @include font-size(3);
+  @include font-size(2);
   @media(min-width: 1000px) {
-    @include font-size(5);
+    @include font-size(3);
   }
 }
 .history__header {
@@ -296,21 +296,14 @@ $block-break: 'min-width: 600px';
     grid-row-gap: 0;
   }
   .person__photo {
-    grid-column: 4 / span 3;
-    grid-row: 1 / span 4;
-  }
-  .person__name {
-    grid-column: 1 / span 5;
-    grid-row: 3 / 4;
-  }
-  .person__title {
-    grid-column: 1 / span 5;
-    grid-row: 4 / 5;
-    margin-bottom: 1em;
+    grid-column: span 2;
   }
   .person__bio {
-    grid-column: 2 / span 5;
-    grid-row-start: 5;
+    grid-column: 3 / span 4;
+    //grid-row-start: 5;
+  }
+  .person__name {
+    margin-top: 0;
   }
 }
 

@@ -40,9 +40,11 @@ get_header();
 						<img class="masthead__logo" alt="13 Celsius" src="<?php echo get_template_directory_uri(); ?>/images/celsiuslogo.svg" />
 						<div class="masthead__details">
 							<div class="masthead__location">
+								<h2 class="masthead__label">Location</h2>
 								<p><?php the_field('address', 'site_options'); ?></p>
 							</div>
 							<div class="masthead__hours">
+								<h2 class="masthead__label">Hours</h2>
 								<p>Monday–Saturday 4 pm–2 am</p>
 								<p>Sunday 1 pm–2 am</p>
 							</div>

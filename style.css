@@ -903,6 +903,10 @@ Mastheads
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
+  @media (max-width: 600px) {
+    .masthead__logo {
+      top: 30%;
+      max-width: 300px; } }
 
 .masthead__details {
   display: -webkit-box;
@@ -918,8 +922,10 @@ Mastheads
   padding: 30px;
   width: 100%;
   height: 100%;
-  font-family: "commuters-sans", sans-serif;
-  font-weight: 200; }
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-family: "matrix-ii", serif;
+  font-weight: 400; }
   @media (min-width: 600px) {
     .masthead__details {
       -webkit-box-pack: justify;
@@ -931,14 +937,27 @@ Mastheads
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row; } }
+              flex-direction: row;
+      font-size: 26px;
+      font-size: 1.625rem; } }
+
+.masthead__label {
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200;
+  font-size: 14px;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  margin-bottom: 0.3em; }
 
 .masthead__hours,
 .masthead__location {
   margin-top: 1em; }
   .masthead__hours p,
   .masthead__location p {
-    margin: 0; }
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: .01em; }
 
 @media (min-width: 600px) {
   .masthead__hours {
@@ -1295,12 +1314,12 @@ Mastheads
   text-transform: uppercase;
   letter-spacing: 0.1em;
   line-height: 1.2;
-  font-size: 30px;
-  font-size: 1.875rem; }
+  font-size: 20px;
+  font-size: 1.25rem; }
   @media (min-width: 1000px) {
     .section__header {
-      font-size: 50px;
-      font-size: 3.125rem; } }
+      font-size: 30px;
+      font-size: 1.875rem; } }
 
 .history__header {
   grid-column: 1 / span 11;
@@ -1407,18 +1426,11 @@ Mastheads
     grid-gap: 1em;
     grid-row-gap: 0; }
   .person__photo {
-    grid-column: 4 / span 3;
-    grid-row: 1 / span 4; }
-  .person__name {
-    grid-column: 1 / span 5;
-    grid-row: 3 / 4; }
-  .person__title {
-    grid-column: 1 / span 5;
-    grid-row: 4 / 5;
-    margin-bottom: 1em; }
+    grid-column: span 2; }
   .person__bio {
-    grid-column: 2 / span 5;
-    grid-row-start: 5; } }
+    grid-column: 3 / span 4; }
+  .person__name {
+    margin-top: 0; } }
 
 /*---------- Inquiries ----------*/
 .page-section--inquiries {
