@@ -1190,25 +1190,20 @@ Mastheads
   background-size: cover;
   background-position: center; }
 
+.intro-block__wrapper {
+  padding: 5vw 0 3vw; }
+  @media (min-width: 600px) {
+    .intro-block__wrapper {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); } }
+
 .intro-block__content {
   font-family: "commuters-sans", sans-serif;
   font-weight: 200; }
   @media (min-width: 600px) {
     .intro-block__content {
-      width: 60%; } }
-
-.intro-block__wrapper {
-  padding: 5vw 0 3vw; }
-  @media (min-width: 600px) {
-    .intro-block__wrapper {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      min-height: 0; } }
+      grid-column: 6 / span 7;
+      width: 100%; } }
 
 .link-arrow {
   display: inline-block;

@@ -86,21 +86,23 @@ $block-break: 'min-width: 600px';
   background-position: center;
 }
 
+.intro-block__wrapper {
+  @media ($block-break) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  padding: 5vw 0 3vw;
+}
+
 .intro-block__content {
   @include sans();
   @media($block-break) {
-    width: 60%;
+    grid-column: 6 / span 7;
+    width: 100%;
   }
 }
 
-.intro-block__wrapper {
-  @media ($block-break) {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-  }
-  padding: 5vw 0 3vw;
-}
 
 .link-arrow {
   display: inline-block;
