@@ -21,7 +21,7 @@
   flex-wrap: wrap;
   li {
     padding: 8px;
-    @include termina-bold();
+    @include sans-bold();
     a {
       text-decoration: none;
       @include link-animation();
@@ -188,7 +188,7 @@
 }
 
 .wine-name {
-  @include termina-bold();
+  @include sans-bold();
   font-size: 85%;
 }
 .wine-type {

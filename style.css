@@ -366,7 +366,7 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
-  font-family: "termina", sans-serif;
+  font-family: "commuters-sans", sans-serif;
   font-weight: 600; }
 
 p {
@@ -561,8 +561,8 @@ a {
 --------------------------------------------------------------*/
 .main-navigation {
   float: right;
-  font-family: "termina", sans-serif;
-  font-weight: 400;
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200;
   letter-spacing: 1px;
   font-size: 12px;
   font-size: 0.75rem;
@@ -645,7 +645,7 @@ a {
   border: none;
   padding: 0;
   color: #d8d4bf;
-  font-family: "termina", sans-serif;
+  font-family: "commuters-sans", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -874,7 +874,7 @@ Mastheads
           align-items: flex-end; }
 
 .masthead__title {
-  font-family: "termina", sans-serif;
+  font-family: "commuters-sans", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .25em;
@@ -919,8 +919,8 @@ Mastheads
   padding: 30px;
   width: 100%;
   height: 100%;
-  font-family: "termina", sans-serif;
-  font-weight: 400; }
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200; }
   @media (min-width: 600px) {
     .masthead__details {
       -webkit-box-pack: justify;
@@ -960,7 +960,7 @@ Mastheads
 
 .footer-details p {
   font-family: "matrix-ii", serif;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 30px;
   font-size: 1.875rem;
   margin-top: 0;
@@ -1052,8 +1052,8 @@ Mastheads
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    font-family: "termina", sans-serif;
-    font-weight: 400;
+    font-family: "commuters-sans", sans-serif;
+    font-weight: 200;
     letter-spacing: .1em;
     font-size: 12px;
     font-size: 0.75rem; }
@@ -1083,7 +1083,7 @@ Mastheads
           left: 0; }
 
 .text-link {
-  font-family: "termina", sans-serif;
+  font-family: "commuters-sans", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -1191,8 +1191,8 @@ Mastheads
   background-position: center; }
 
 .intro-block__content {
-  font-family: "termina", sans-serif;
-  font-weight: 400; }
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200; }
   @media (min-width: 600px) {
     .intro-block__content {
       width: 60%; } }
@@ -1272,8 +1272,8 @@ Mastheads
   padding: 7px 10px;
   margin-bottom: 0px;
   display: inline-block;
-  font-family: "termina", sans-serif;
-  font-weight: 400;
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 13px;
@@ -1296,7 +1296,7 @@ Mastheads
     grid-auto-rows: auto; } }
 
 .section__header {
-  font-family: "termina", sans-serif;
+  font-family: "commuters-sans", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -1326,7 +1326,7 @@ Mastheads
   z-index: -2; }
 
 .history__intro {
-  font-family: "termina", sans-serif;
+  font-family: "commuters-sans", sans-serif;
   font-weight: 600;
   font-size: 18px;
   font-size: 1.125rem;
@@ -1386,7 +1386,7 @@ Mastheads
 
 .person__name {
   font-family: "matrix-ii", serif;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 0;
@@ -1398,8 +1398,8 @@ Mastheads
       font-size: 1.625rem; } }
 
 .person__title {
-  font-family: "termina", sans-serif;
-  font-weight: 400;
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 13px;
@@ -1443,7 +1443,7 @@ Mastheads
       float: right; } }
 
 .inquiries__intro {
-  font-family: "termina", sans-serif;
+  font-family: "commuters-sans", sans-serif;
   font-weight: 600; }
 
 .inquiries-form .acf-fields > .acf-field {
@@ -1460,8 +1460,8 @@ Mastheads
   width: 100%; }
 
 .inquiries-form label {
-  font-family: "termina", sans-serif;
-  font-weight: 400;
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200;
   font-weight: 400 !important;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1550,12 +1550,12 @@ Mastheads
       flex-wrap: wrap; }
   .menu-subnav li {
     padding: 8px;
-    font-family: "termina", sans-serif;
+    font-family: "commuters-sans", sans-serif;
     font-weight: 600; }
     .menu-subnav li a {
       text-decoration: none;
       text-decoration: none;
-      font-family: "termina", sans-serif;
+      font-family: "commuters-sans", sans-serif;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.15em;
@@ -1730,7 +1730,7 @@ Mastheads
   display: inline-block; }
 
 .wine-name {
-  font-family: "termina", sans-serif;
+  font-family: "commuters-sans", sans-serif;
   font-weight: 600;
   font-size: 85%; }
 
@@ -1811,8 +1811,8 @@ Mastheads
 
 .masthead__date,
 .entry-date {
-  font-family: "termina", sans-serif;
-  font-weight: 400;
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.15em; }
 

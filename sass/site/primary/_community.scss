@@ -24,7 +24,7 @@
 
 .masthead__date,
 .entry-date {
-  @include termina();
+  @include sans();
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }

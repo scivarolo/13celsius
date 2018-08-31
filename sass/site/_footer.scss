@@ -128,7 +128,7 @@
     text-align: center;
     display:flex;
     justify-content: space-around;
-    @include termina();
+    @include sans();
     letter-spacing: .1em;
     @include font-size(1.2);
     @media (max-width: 700px) {
@@ -144,7 +144,7 @@
 }
 
 .text-link {
-  @include termina-bold();
+  @include sans-bold();
   text-transform: uppercase;
   letter-spacing: 0.15em;
   position: relative;

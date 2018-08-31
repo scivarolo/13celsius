@@ -1,6 +1,6 @@
 .main-navigation {
   float: right;
-  @include termina();
+  @include sans();
 	letter-spacing: 1px;
 	@include font-size(1.2);
   text-transform: capitalize;
@@ -101,7 +101,7 @@
   border: none;
   padding: 0;
   color: $celsius-white;
-  @include termina-bold();
+  @include sans-bold();
   text-transform: uppercase;
   letter-spacing: 2px;
   margin: 30px;

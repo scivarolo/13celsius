@@ -53,7 +53,7 @@ Mastheads
 }
 
 .masthead__title {
-  @include termina-bold();
+  @include sans-bold();
   text-transform: uppercase;
   letter-spacing: .25em;
   line-height: 1.2;
