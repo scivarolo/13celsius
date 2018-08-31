@@ -1190,6 +1190,26 @@ Mastheads
   background-size: cover;
   background-position: center; }
 
+.intro-block__content {
+  font-family: "termina", sans-serif;
+  font-weight: 400; }
+  @media (min-width: 600px) {
+    .intro-block__content {
+      width: 60%; } }
+
+.intro-block__wrapper {
+  padding: 5vw 0 3vw; }
+  @media (min-width: 600px) {
+    .intro-block__wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      min-height: 0; } }
+
 .link-arrow {
   display: inline-block;
   -webkit-transform: translateX(-50%);
@@ -1506,10 +1526,9 @@ Mastheads
 
 /*---- Menu Sub Nav ----*/
 .subnav .container {
-  padding-bottom: 0; }
+  padding: 0; }
 
 .subnav__label {
-  text-transform: uppercase;
   font-size: 12px;
   font-size: 0.75rem;
   letter-spacing: 0.1em;

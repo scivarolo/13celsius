@@ -1,11 +1,10 @@
 /*---- Menu Sub Nav ----*/
 
 .subnav {
-  .container { padding-bottom: 0; }
+  .container { padding: 0; }
 }
 
 .subnav__label {
-  text-transform: uppercase;
   @include font-size(1.2);
   letter-spacing: 0.1em;
   font-weight: 300;

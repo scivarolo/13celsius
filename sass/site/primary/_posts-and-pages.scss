@@ -86,6 +86,25 @@ $block-break: 'min-width: 600px';
   background-position: center;
 }
 
+
+
+
+.intro-block__content {
+  @include termina();
+  @media($block-break) {
+    width: 60%;
+  }
+}
+
+.intro-block__wrapper {
+  @media ($block-break) {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  padding: 5vw 0 3vw;
+}
+
 .link-arrow {
   display: inline-block;
   transform: translateX(-50%);

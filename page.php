@@ -32,7 +32,7 @@ get_header();
 						<div class="masthead__content">
 							<div class="grid-wrapper">
 								<h1 class="masthead__title"><?php the_title(); ?></h1>
-								<div class="masthead__intro"><?php the_content(); ?></div>
+								<!-- <div class="masthead__intro"><?php the_content(); ?></div> -->
 							</div>
 						</div>
 					</div>

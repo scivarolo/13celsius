@@ -12,6 +12,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('menu-page'); ?>>
 
 	<div class="entry-content menu-content">
+		<div class="text-block intro-block --dark">
+		  <div class="text-block__wrapper intro-block__wrapper container">
+			  <div class="text-block__content intro-block__content">
+					<?php the_content(); ?>
+				</div>
+			</div>
+		</div>
 		<div class="subnav">
 			<div class="container">
 			<h3 class="subnav__label">Browse our Selection</h3>
