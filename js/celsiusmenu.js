@@ -106,7 +106,7 @@ function drawMenu(wineList) {
     //TODO: Replace description with description from Google Sheet.
     let sectionDescription = document.createElement('p');
     sectionDescription.classList.add('menu-section__desc');
-    sectionDescription.innerHTML = sectionDesc;
+    sectionDescription.innerHTML = section[0].description;
 
     // add sectionHeader to sectionDivContainer
     sectionDiv.appendChild(sectionDivContainer);
@@ -126,7 +126,7 @@ function drawMenu(wineList) {
       //TODO: Replace description with Google Sheet Description.
       let subCatDescription = document.createElement('p');
       subCatDescription.classList.add('subcategory-desc');
-      subCatDescription.innerHTML = subCatDescr;
+      subCatDescription.innerHTML = subCat[0].description;
 
       let subCatDiv = document.createElement('div');
       subCatDiv.classList.add('table-wrapper', 'accordion-panel');
