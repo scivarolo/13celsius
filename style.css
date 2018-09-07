@@ -364,6 +364,10 @@ textarea {
   font-size: 1rem;
   line-height: 1.6; }
 
+blockquote {
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 200; }
+
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-family: "commuters-sans", sans-serif;
@@ -1297,8 +1301,8 @@ Mastheads
 
 .archive-event .event__heading {
   margin-top: .5em;
-  font-family: "matrix-ii-ext-semi-wide";
-  font-weight: 400;
+  font-family: "commuters-sans", sans-serif;
+  font-weight: 600;
   font-size: 26px;
   font-size: 1.625rem; }
 

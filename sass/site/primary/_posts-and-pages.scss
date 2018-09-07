@@ -165,7 +165,7 @@ $block-break: 'min-width: 600px';
 
 .archive-event .event__heading {
   margin-top: .5em;
-  @include matrix-extended();
+  @include sans-bold();
   @include font-size(2.6);
 }
 
