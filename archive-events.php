@@ -43,7 +43,7 @@ get_header();
 					<div class="archive-event__date">
 						<?php the_field('event_date'); ?>
 					</div>
-					<h3 class="event__heading"><?php the_title(); ?></h3>
+					<h3 class="event__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 					<p class="event__description"><?php the_excerpt(); ?></p>
 					<?php //get_template_part( 'template-parts/content', get_post_type() ); ?>
 				</li>

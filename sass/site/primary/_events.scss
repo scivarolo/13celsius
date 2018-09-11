@@ -12,3 +12,18 @@
     font-size: 125%;
   }
 }
+
+.single-events .blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  .content-area {
+    grid-row: 2;
+  }
+  @media (min-width: 750px) {
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 3em;
+    .content-area {
+      grid-row: auto;
+    }
+  }
+}

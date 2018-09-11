@@ -159,6 +159,11 @@ $block-break: 'min-width: 600px';
   @include font-size(1.3);
 }
 
+.all-events-link {
+  text-align: center;
+  margin-top: 2em;
+}
+
 .event__heading, .event__description {
   clear: none;
 }

@@ -89,7 +89,7 @@ get_header();
 										<div class="home-event__date">
 											<?php the_field('event_date'); ?>
 										</div>
-										<h3 class="event__heading"><?php the_title(); ?></h3>
+										<h3 class="event__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 										<p class="event__description"><?php the_excerpt(); ?></p>
 									</li>
 
@@ -97,6 +97,9 @@ get_header();
 
 									
 								</ul>
+								<div class="all-events-link">
+								<a class="text-link" href="<?php echo get_post_type_archive_link('events'); ?>">All Events</a>
+								</div>
 							</div>
 						</div>
 
