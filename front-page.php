@@ -45,8 +45,12 @@ get_header();
 							</div>
 							<div class="masthead__hours">
 								<h2 class="masthead__label">Hours</h2>
-								<p>Monday–Saturday 4 pm–2 am</p>
-								<p>Sunday 1 pm–2 am</p>
+								<?php if(have_rows('hours', 'site_options') ) : 
+									while(have_rows('hours', 'site_options') ) : the_row(); ?>
+										<p><?php the_sub_field('days'); ?> <?php the_sub_field('time'); ?></p>
+									<?php endwhile; ?>
+								<?php endif; ?>
+								
 							</div>
 						</div>
           </div>
