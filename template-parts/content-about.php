@@ -12,72 +12,52 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-
+		<?php $history = get_field('history_section'); ?>
     <div class="page-section page-section--history">
       <div class="container">
-				<h2 class="section__header history__header">History</h2>
-				<img class="image1" src="//picsum.photos/1920/1080/?random&blur">
+				<h2 class="section__header history__header"><?php echo $history['heading']; ?></h2>
+				<img class="image1" src="<?php echo $history['right_image_horizontal']['sizes']['large']; ?>">
 				<div class="history__intro">
-					<p>Our goal is to not only emulate the wine bars and enotecas of Europe, but to surpass them in quality and range of selection.</p>
+					<p><?php echo $history['intro'] ?></p>
 				</div>
 				<div class="history__content">
-					<p>13 is house in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004. Rather than raze this aging structure and build anew, we chose to harness the underlying beauty of its original character by preserving key components to the space such as an entirely intact pressed tin ceiling and an open-air courtyard created (by the building's own volition) when a portion of the roof fell. We built a 40-foot bar of antiqued white Carrera marble and furnished the space with furniture salvaged from an historic Houston institution, the Warwick Hotel.</p>
-					<p>We complement our wines with a dynamic cheese and charcuterie program, fill empty bellies with impressive panini and satisfy a sweet tooth with handmade truffles.</p>
-					<p>We also cultivate an aggressive hops and water program with over 30 bottled beers and a continually rotating draught selection highlighting seasonal and miniscule production brews.</p>
-					<p>We design wine flights, host wine tastings and make our entire collection available for retail purchase. We also partner with outstanding local chefs to create wine-centric dinner and special events throughout the year.</p>
+					<?php echo $history['content']; ?>
 				</div>
-				<img class="image2" src="//picsum.photos/1080/1920/?random&blur">
+				<img class="image2" src="<?php echo $history['left_image_vertical']['sizes']['large']; ?>">
 			</div>
       
 		</div>
 
 		<?php echo get_template_part('template-parts/sections', 'page'); ?>
 
-		
+		<?php if( have_rows('staff') ) : ?>
     <div class="page-section page-section--people">
 			<div class="container">
 				<h2 class="section__header">People</h2>
 				<ul class="people__list">
+				
+				<?php while( have_rows('staff') ) : the_row(); ?>
+				
 					<li class="person">
-						<img class="person__photo" src="//picsum.photos/400/400/?random&blur">
+						<?php if(get_sub_field('photo') ) : 
+							$headshot = get_sub_field('photo');?>
+							<img class="person__photo" src="<?php echo $headshot['sizes']['thumbnail']; ?>">
+						<?php endif; ?>
 						
 						<div class="person__bio">
-							<h3 class="person__name">Adele Corrigan</h3>
-							<span class="person__title">General Manager &amp; Sommelier</span>
-							<p>13 is housed in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004.</p>
+							<h3 class="person__name"><?php the_sub_field('name'); ?></h3>
+							<span class="person__title"><?php the_sub_field('position'); ?></span>
+							<p><?php the_sub_field('bio'); ?></p>
 						</div>
 					</li>
-					<li class="person">
-						<img class="person__photo" src="//picsum.photos/400/400/?random&blur">
-						
-						<div class="person__bio">
-							<h3 class="person__name">Adele Corrigan</h3>
-							<span class="person__title">General Manager &amp; Sommelier</span>
-							<p>13 is housed in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004.</p>
-						</div>
-					</li>
-					<li class="person">
-						<img class="person__photo" src="//picsum.photos/400/400/?random&blur">
-						
-						<div class="person__bio">
-							<h3 class="person__name">Adele Corrigan</h3>
-							<span class="person__title">General Manager &amp; Sommelier</span>
-							<p>13 is housed in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004.</p>
-						</div>
-					</li>
-					<li class="person">
-						<img class="person__photo" src="//picsum.photos/400/400/?random&blur">
-						
-						<div class="person__bio">
-							<h3 class="person__name">Adele Corrigan</h3>
-							<span class="person__title">General Manager &amp; Sommelier</span>
-							<p>13 is housed in a 1920s era Mediterranean-style building in an often forgotten portion of Midtown in Houston, Texas. The building was originally constructed as Jenning's Cleaners and Dyeing Shoppe and operated as such until 2004.</p>
-						</div>
-					</li>
+					
+				<?php endwhile; ?>
+					
 				</ul>
 			</div>
     </div>
-    
+    <?php endif; ?>
+		
 		<?php
 		//the_content();
 

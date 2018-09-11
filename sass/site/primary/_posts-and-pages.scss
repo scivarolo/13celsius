@@ -265,7 +265,7 @@ $block-break: 'min-width: 600px';
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2em;
+  grid-gap: 3em;
 }
 
 .person {
@@ -279,6 +279,7 @@ $block-break: 'min-width: 600px';
   @include matrix-ii-bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  line-height: 1;
   margin-bottom: 0;
   @include font-size(2.2);
   @media (min-width: 1000px) {
@@ -297,11 +298,12 @@ $block-break: 'min-width: 600px';
   .person {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-gap: 1em;
+    grid-gap: 1.75em;
     grid-row-gap: 0;
   }
   .person__photo {
     grid-column: span 2;
+    width: 100%;
   }
   .person__bio {
     grid-column: 3 / span 4;
