@@ -84,7 +84,6 @@ function drawMenu(wineList) {
   // Display the Menu
   
   // Temporary placeholder content
-  // TODO: Add descriptions to Google Sheet
   let sectionDesc = 'Our list of fine and dynamic wines from all over the world is curated and cared for by Adele Corrigan. Let our staff help you find that glass or bottle of wine in our cellar that is meant specifically for you. We are able to offer tastes of a lot of our wines.';
   let subCatDescr = 'Our list of fine and dynamic wines from all over the world is curated and cared for by Adele Corrigan. Let our staff help you find that glass or bottle of wine in our cellar that is meant specifically for you. We are able to offer tastes of a lot of our wines.';
 
@@ -103,7 +102,6 @@ function drawMenu(wineList) {
     sectionHeading = document.createElement('h2');
     sectionHeading.classList.add('menu-section-heading');
     sectionHeading.innerHTML = section[0].section;
-    //TODO: Replace description with description from Google Sheet.
     let sectionDescription = document.createElement('p');
     sectionDescription.classList.add('menu-section__desc');
     sectionDescription.innerHTML = section[0].description;
@@ -123,7 +121,6 @@ function drawMenu(wineList) {
       subCatHeader.classList.add('subcategory-header', 'accordion-button');
       subCatHeader.innerHTML = '<h3>' + subCat[0].subcat + '</h3>';
 
-      //TODO: Replace description with Google Sheet Description.
       let subCatDescription = document.createElement('p');
       subCatDescription.classList.add('subcategory-desc');
       subCatDescription.innerHTML = subCat[0].description;
