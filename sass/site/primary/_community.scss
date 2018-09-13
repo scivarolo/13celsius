@@ -67,3 +67,10 @@ article.post {
 .entry-footer {
   grid-column: span 12;
 }
+
+.blog .widget-area {
+  @media (min-width: 750px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
