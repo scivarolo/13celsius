@@ -2,6 +2,8 @@ debug = true;
 
 const menuUrl = 'https://script.google.com/macros/s/AKfycbzSMO68LJqEYYZX5gChHe1njDeGFOu7FGYvuH379bPi8vvdVhRt/exec';
 
+const foodMenuUrl = 'https://script.google.com/macros/s/AKfycbyKetg9-vNR78B-l2FpgcUnpvi3gffPpnajtSf8lQ/exec';
+
 let getJSON = function (url, callback) {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', url, true);
@@ -213,6 +215,171 @@ function drawMenu(wineList) {
     document.getElementById('wine-menu').append(sectionDiv);
   } 
   
+
+  getJSON(foodMenuUrl, function (err, data) {
+    if (err !== null) {
+      console.log('The menu did not load: ' + err);
+    } else {
+      drawFoodMenu(data);
+    };
+  });
+
+
+} //end drawMenu
+
+// Food Menu
+
+
+
+function drawFoodMenu(foodList) {
+
+  //This function gets called inside drawMenu() before the accordion animation gets added.
+
+  // Split main array into array of each section.
+  let sectionIndices = [];
+  let sections = [];
+  for (let i = 0; i < foodList.list.length; i++) {
+    let row = foodList.list[i];
+    if (row.section) {
+      sectionIndices.push(i);
+    }
+  }
+
+  sectionIndices.forEach(function (section, i) {
+    sections[i] = foodList.list.slice(sectionIndices[i], sectionIndices[i + 1]);
+  });
+
+  // Split Sections into subcategory arrays
+  let subcatIndices = [];
+
+  for (let i = 0; i < sections.length; i++) {
+    subcatIndices[i] = [];
+    for (let j = 0; j < sections[i].length; j++) {
+      if (sections[i][j].subcat) {
+        subcatIndices[i].push(j);
+      }
+    }
+  }
+
+  let newSections = [];
+
+  for (let i = 0; i < sections.length; i++) {
+    newSections[i] = [];
+    newSections[i].push(sections[i][0]);
+    subcatIndices[i].forEach(function (subcat, j) {
+      newSections[i][j + 1] = sections[i].slice(subcatIndices[i][j], subcatIndices[i][j + 1]);
+    });
+  }
+
+  let foodMenu = newSections;
+
+  if (debug) {
+    console.log(foodMenu);
+  }
+
+  //Add to subnav
+  let subNavHTML = '';
+  for (let i = 0; i < foodMenu.length; i++) {
+    let j = 100;
+    subNavHTML += '<li><a href="#section' + j + '">' + foodMenu[i][0].section + '</a></li>';
+    j++;
+  }
+  document.querySelector('.subnav .menu-subnav').insertAdjacentHTML('beforeend', subNavHTML);
+
+  // Render Food Sections
+  
+  // // Create div and add header for each section
+  for (let i = 0; i < foodMenu.length; i++) {
+    let section = foodMenu[i];
+    let sectionDiv = document.createElement('div');
+    sectionDiv.setAttribute('id', 'section' + (i + 100));
+    sectionDiv.classList.add('menu-section');
+    let sectionDivContainer = document.createElement('div');
+    sectionDivContainer.classList.add('container');
+
+    sectionHeaderWrapper = document.createElement('header');
+    sectionHeaderWrapper.classList.add('menu-section-header')
+
+    sectionHeading = document.createElement('h2');
+    sectionHeading.classList.add('menu-section-heading');
+    sectionHeading.innerHTML = section[0].section;
+    let sectionDescription = document.createElement('p');
+    sectionDescription.classList.add('menu-section__desc');
+    sectionDescription.innerHTML = section[0].description;
+
+    // add sectionHeader to sectionDivContainer
+    sectionDiv.appendChild(sectionDivContainer);
+    sectionDivContainer.appendChild(sectionHeaderWrapper);
+    sectionHeaderWrapper.appendChild(sectionHeading);
+    sectionHeaderWrapper.appendChild(sectionDescription);
+    // create subcat
+    for (let j = 1; j < section.length; j++) {
+      let subCat = section[j];
+      console.log(subCat);
+      let subCatHTML = document.createElement('div');
+      subCatHTML.classList.add('menu-subcategory');
+
+      let subCatHeader = document.createElement('div');
+      subCatHeader.classList.add('subcategory-header', 'accordion-button');
+      subCatHeader.innerHTML = '<h3>' + subCat[0].subcat + '</h3>';
+
+      let subCatDescription = document.createElement('p');
+      subCatDescription.classList.add('subcategory-desc');
+      subCatDescription.innerHTML = subCat[0].description;
+
+      let subCatDiv = document.createElement('div');
+      subCatDiv.classList.add('table-wrapper', 'accordion-panel');
+      let subCatTable = document.createElement('table');
+      subCatTable.classList.add('subcategory-table');
+
+      let subCatTableHead = '<thead><tr><th></th></tr></thead>';
+
+      let subCatRows = document.createElement('tbody');
+
+      for (let k = 1; k < subCat.length; k++) {
+        let foodItem = subCat[k];
+        let subCatRow = document.createElement('tr');
+        subCatRow.classList.add('wine-row');
+
+
+        let foodDetails = document.createElement('td');
+        let foodName, foodDescription;
+        if (foodItem.name) {
+          foodName = document.createElement('span');
+          foodName.classList.add('wine-name');
+          foodName.innerHTML = foodItem.name;
+          foodDetails.append(foodName);
+        }
+        if (foodItem.description) {
+          foodDescription = document.createElement('span');
+          foodDescription.classList.add('wine-notes');
+          foodDescription.innerHTML = foodItem.description;
+          foodDetails.append(foodDescription);
+        }
+        subCatRow.append(foodDetails);
+        subCatRows.append(subCatRow);
+      }
+
+      subCatTable.innerHTML = subCatTableHead;
+      subCatTable.append(subCatRows);
+
+      // Combine all of the pieces into subCatHTML
+      subCatHTML.append(subCatHeader);
+      subCatDiv.append(subCatDescription);
+      subCatDiv.append(subCatTable);
+      subCatHTML.append(subCatDiv);
+      sectionDivContainer.append(subCatHTML);
+    }
+
+    document.getElementById('wine-menu').append(sectionDiv);
+  }
+
+  accordionAnimation();
+
+} 
+
+
+function accordionAnimation() {
   //Accordion Animation
   let accordion = document.getElementsByClassName('accordion-button');
 
@@ -227,6 +394,4 @@ function drawMenu(wineList) {
       }
     });
   }
-
-} //end drawMenu
-
+}
