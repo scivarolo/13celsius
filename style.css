@@ -1779,6 +1779,7 @@ Mastheads
   font-style: italic; }
 
 .subcategory-table th {
+  text-align: right;
   border-bottom: 1px solid rgba(216, 212, 191, 0.25);
   padding: 10px 5px; }
   @media (max-width: 800px) {
@@ -1795,6 +1796,7 @@ Mastheads
 .wine-glass,
 .wine-half,
 .wine-bottle {
+  text-align: right;
   position: relative;
   width: 30px; }
   @media (min-width: 800px) {
@@ -1802,23 +1804,6 @@ Mastheads
     .wine-half,
     .wine-bottle {
       width: 60px; } }
-  .wine-glass::after,
-  .wine-half::after,
-  .wine-bottle::after {
-    position: absolute;
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid #d8d4bf;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-5px, -5px);
-            transform: translate(-5px, -5px); }
-  .wine-glass.available::after,
-  .wine-half.available::after,
-  .wine-bottle.available::after {
-    background-color: #d8d4bf; }
 
 .widget-title {
   font-size: 20px;
