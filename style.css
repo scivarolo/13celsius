@@ -845,6 +845,14 @@ Mastheads
   background-color: #2b0516;
   background-blend-mode: multiply; }
 
+@media (max-width: 799px) {
+  .masthead {
+    background-attachment: scroll !important;
+    background-size: 150% !important;
+    background-position-y: 30% !important;
+  }
+}
+
 .masthead--home {
   height: 90vh; }
 

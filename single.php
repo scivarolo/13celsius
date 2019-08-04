@@ -15,7 +15,7 @@ get_header();
 
 <?php $masthead_image = get_field('background_image');
 	if($masthead_image) : ?>
-		<div class="masthead masthead--page" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed center/cover;">
+		<div class="masthead masthead--page" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed top/100%;">
 	<?php else : ?>
 		<div class="masthead masthead--page">
 	<?php endif; ?>
@@ -32,7 +32,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		
+
 			<?php get_template_part( 'template-parts/content', get_post_type() );
 
 			the_post_navigation();
@@ -42,7 +42,7 @@ get_header();
 				comments_template();
 			endif; ?>
 
-	
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
