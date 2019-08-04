@@ -27,9 +27,9 @@
 				</div>
 				<div class="footer-location">
 					<h2 class="footer-label">Location</h2>
-					<p><?php the_field('address', 'site_options'); ?></p>
+					<p><a href="https://goo.gl/maps/dyE8yEWd9pTG9PK16"><?php the_field('address', 'site_options'); ?></a></p>
 					
-					<p><img src="<?php echo get_template_directory_uri(); ?>/images/map-temp.png" /></p>
+					<p><a href="https://goo.gl/maps/dyE8yEWd9pTG9PK16"><img src="<?php echo get_template_directory_uri(); ?>/images/map-temp.png" /></a></p>
 				</div>
 				<div class="footer-contact">
 					<h2 class="footer-label">Contact Us</h2>
@@ -39,12 +39,12 @@
 					<h2 class="footer-label">Our Family</h2>
 					<div class="family-logo">
 						<a href="//mongooseversuscobra.com">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/mvscpurple.svg" />
+							<img src="<?php echo get_template_directory_uri(); ?>/images/purplemvsc.svg" />
 						</a>
 					</div>
 					<div class="family-logo">
 						<a href="//weights-measures.com/">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/wmpurple.svg" />
+							<img src="<?php echo get_template_directory_uri(); ?>/images/purplewm.svg" />
 						</a>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 		<div class="footer-section footer-section__main --dark">
 			<div class="container">
 				<div class="footer-13logo">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/thirteenonly.svg" />
+					<img src="<?php echo get_template_directory_uri(); ?>/images/thirteenlogoshort.svg" />
 				</div>
 				<div class="footer-social">
 

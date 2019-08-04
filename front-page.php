@@ -37,7 +37,7 @@ get_header();
 					<?php else : ?>
 						<div class="masthead masthead--home">
 					<?php endif; ?>
-						<img class="masthead__logo" alt="13 Celsius" src="<?php echo get_template_directory_uri(); ?>/images/celsiuslogo.svg" />
+						<img class="masthead__logo" alt="13 Celsius" src="<?php echo get_template_directory_uri(); ?>/images/celsiuslogocopy.png" />
 						<div class="masthead__details">
 							<div class="masthead__location">
 								<h2 class="masthead__label">Location</h2>
