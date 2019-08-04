@@ -677,9 +677,9 @@ a {
   .main-navigation a {
     color: #0a0109; }
     .main-navigation a:hover, .main-navigation a:active, .main-navigation a:focus {
-      color: #380633; }
+      color: #44061f; }
   .current-menu-item {
-    background-color: #380633; }
+    background-color: #44061f; }
     .current-menu-item a {
       color: #d8d4bf; } }
 
@@ -842,7 +842,7 @@ Mastheads
   width: 100vw;
   max-width: 100%;
   position: relative;
-  background-color: #21031e;
+  background-color: #2b0516;
   background-blend-mode: multiply; }
 
 .masthead--home {
@@ -900,8 +900,8 @@ Mastheads
     font-size: 1.25rem; } }
 
 .masthead__logo {
-  width: 400px;
-  max-width: 90%;
+  width: 600px;
+  max-width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -975,7 +975,7 @@ Mastheads
     color: #0a0109; }
 
 .--medium {
-  background-color: #380633; }
+  background-color: #44061f; }
 
 .footer-hours {
   margin-bottom: 1em; }
@@ -1024,7 +1024,7 @@ Mastheads
   padding-bottom: 4vw; }
 
 .footer-13logo img {
-  max-width: 100px;
+  max-width: 200px;
   display: block;
   margin: 0 auto; }
 
@@ -1205,7 +1205,7 @@ Mastheads
     font-size: 1.125rem; } }
 
 .text-block.--has-bg-image {
-  background-color: #380633;
+  background-color: #44061f;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(10, 1, 9, 0.65)), to(rgba(10, 1, 9, 0.65))), var(--background-url);
   background: linear-gradient(to top, rgba(10, 1, 9, 0.65), rgba(10, 1, 9, 0.65)), var(--background-url);
   background-blend-mode: multiply;
@@ -1385,7 +1385,7 @@ Mastheads
     height: 50vw; }
 
 .image-section {
-  background-color: #380633;
+  background-color: #44061f;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(10, 1, 9, 0.25)), to(rgba(10, 1, 9, 0.25))), var(--background-url);
   background: linear-gradient(to top, rgba(10, 1, 9, 0.25), rgba(10, 1, 9, 0.25)), var(--background-url);
   background-blend-mode: multiply;
@@ -1618,7 +1618,7 @@ Mastheads
   padding: 6vw 0; }
 
 .menu-section:nth-child(even) {
-  background-color: #21031e; }
+  background-color: #2b0516; }
 
 .subcategory-desc {
   margin-bottom: 0;
@@ -1712,9 +1712,9 @@ Mastheads
     font-size: 40px;
     font-size: 2.5rem; }
   .accordion-button:hover {
-    background-color: #380633; }
+    background-color: #44061f; }
   .accordion-button.active {
-    background-color: #380633; }
+    background-color: #44061f; }
   .accordion-button.active::after {
     content: "-"; }
 
