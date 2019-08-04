@@ -26,7 +26,7 @@ get_header();
 		<main id="main" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
-			
+
 		<ul class="archive-events__list">
 
 			<?php

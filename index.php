@@ -35,7 +35,7 @@ get_header();
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
-				
+
 			endif; ?>
 			<?php /* Start the Loop */
 			while ( have_posts() ) :
@@ -49,7 +49,7 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile; ?>
-			
+
 			<?php the_posts_navigation();
 
 		else :

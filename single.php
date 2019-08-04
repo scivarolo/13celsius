@@ -15,7 +15,7 @@ get_header();
 
 <?php $masthead_image = get_field('background_image');
 	if($masthead_image) : ?>
-		<div class="masthead masthead--page" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed top/100%;">
+		<div class="masthead masthead--page" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed center/cover;">
 	<?php else : ?>
 		<div class="masthead masthead--page">
 	<?php endif; ?>

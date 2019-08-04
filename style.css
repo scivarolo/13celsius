@@ -846,10 +846,17 @@ Mastheads
   background-blend-mode: multiply; }
 
 @media (max-width: 799px) {
-  .masthead {
+  .masthead.masthead--page {
     background-attachment: scroll !important;
-    background-size: 150% !important;
-    background-position-y: 30% !important;
+    background-size: 180% !important;
+    background-position-y: 0% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .masthead.masthead--page {
+    background-size: 250% !important;
+    background-position-y: 0% !important;
   }
 }
 
