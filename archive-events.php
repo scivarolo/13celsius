@@ -40,12 +40,18 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */ ?>
 				<li class="archive-event">
-					<div class="archive-event__date">
-						<?php the_field('event_date'); ?>
+					<?php $event_image = get_field('background_image'); ?>
+					<?php if ($event_image) : ?>
+						<a href="<?php the_permalink(); ?>"><img class="event-thumbnail" src="<?php echo $event_image['sizes']['medium_large'] ?>" /></a>
+					<?php endif; ?>
+					<div class="archive-event__wrapper">
+						<div class="archive-event__date">
+							<?php the_field('event_date'); ?>
+						</div>
+						<h3 class="event__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+						<p class="event__description"><?php the_excerpt(); ?></p>
+						<?php //get_template_part( 'template-parts/content', get_post_type() ); ?>
 					</div>
-					<h3 class="event__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					<p class="event__description"><?php the_excerpt(); ?></p>
-					<?php //get_template_part( 'template-parts/content', get_post_type() ); ?>
 				</li>
 
 			<?php endwhile; ?>

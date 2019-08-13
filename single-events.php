@@ -33,9 +33,9 @@ get_header();
 		<main id="main" class="site-main">
 
 
-			<?php get_template_part( 'template-parts/content', get_post_type() );
+			<?php get_template_part( 'template-parts/content', get_post_type() ); ?>
 
-			the_post_navigation(); ?>
+			<!-- <?php the_post_navigation(); ?> -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

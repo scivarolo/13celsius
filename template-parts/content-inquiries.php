@@ -17,11 +17,8 @@
       <div class="container">
 				<!-- <h2 class="section__header">Special Requests</h2> -->
 				<div class="left-column">
-					<div class="inquiries__intro">
-					<p>Interested in reserving some space or the patio for a large party or private function? Looking to order wine? Fill out the form and we'll get back to you.</p>
-					</div>
-					<div class="inquiries__text">
-						<p>Submitting this form does not guarantee a reservation. We will contact you within 48 hours to discuss your request.</p>
+					<div class="inquiries-content">
+						<?php the_content(); ?>
 					</div>
 				</div>
 				<div class="right-column">
@@ -30,13 +27,10 @@
 					</div>
 				</div>
 			</div>
-      
+
 		</div>
-		<div class="image-section" style="--background-url: url('https://picsum.photos/1920/1080/?random&blur');">
-			
-		</div>
-    
-    
+
+
 		<?php
 		//the_content();
 
