@@ -1831,6 +1831,11 @@ Mastheads
   text-transform: uppercase;
   letter-spacing: 0.15em; }
 
+.entry-date a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .masthead__date {
   margin-bottom: 1em; }
 
@@ -1871,13 +1876,18 @@ article.post {
     article.post {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-gap: 1em; } }
+      grid-gap: 0 2em; } }
 
 .entry-header {
-  grid-column: span 5; }
+  grid-column: span 10; }
 
 .entry-content {
-  grid-column: span 7; }
+  grid-column: span 10; }
+
+.post-thumbnail {
+  grid-column: span 2;
+  grid-row: span 3;
+}
 
 .entry-footer {
   grid-column: span 12; }
