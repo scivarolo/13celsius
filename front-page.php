@@ -29,7 +29,7 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */ ?>
 
-				
+
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<?php $masthead_image = get_field('background_image');
 					if($masthead_image) : ?>
@@ -45,12 +45,12 @@ get_header();
 							</div>
 							<div class="masthead__hours">
 								<h2 class="masthead__label">Hours</h2>
-								<?php if(have_rows('hours', 'site_options') ) : 
+								<?php if(have_rows('hours', 'site_options') ) :
 									while(have_rows('hours', 'site_options') ) : the_row(); ?>
 										<p><?php the_sub_field('days'); ?> <?php the_sub_field('time'); ?></p>
 									<?php endwhile; ?>
 								<?php endif; ?>
-								
+
 							</div>
 						</div>
           </div>
@@ -86,16 +86,23 @@ get_header();
 									<?php foreach($posts as $post) : setup_postdata($post); ?>
 
 									<li class="home-event">
-										<div class="home-event__date">
-											<?php the_field('event_date'); ?>
+
+										<?php $event_image = get_field('background_image'); ?>
+										<?php if($event_image): ?>
+											<a href="<?php the_permalink(); ?>"><img class="event-thumbnail" src="<?php echo $event_image['sizes']['medium_large'] ?>" /></a>
+										<?php endif; ?>
+										<div class="home-event__wrapper">
+											<div class="home-event__date">
+												<?php the_field('event_date'); ?>
+											</div>
+											<h3 class="event__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+											<p class="event__description"><?php the_excerpt(); ?></p>
 										</div>
-										<h3 class="event__heading"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-										<p class="event__description"><?php the_excerpt(); ?></p>
 									</li>
 
 									<?php endforeach; ?>
 
-									
+
 								</ul>
 								<div class="all-events-link">
 								<a class="text-link" href="<?php echo get_post_type_archive_link('events'); ?>">All Events</a>

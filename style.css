@@ -845,8 +845,29 @@ Mastheads
   background-color: #2b0516;
   background-blend-mode: multiply; }
 
+@media (max-width: 799px) {
+  .masthead.masthead--page {
+    background-attachment: scroll !important;
+    background-size: 180% !important;
+    background-position-y: 0% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .masthead.masthead--page {
+    background-size: 250% !important;
+    background-position-y: 0% !important;
+  }
+}
+
 .masthead--home {
   height: 90vh; }
+
+@media (max-width: 799px) {
+  .masthead.masthead--home {
+    background-attachment: scroll !important;
+  }
+}
 
 .masthead--page {
   min-height: 300px;
@@ -1272,15 +1293,30 @@ Mastheads
   margin: 0;
   padding: 0;
   grid-gap: 3em; }
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     .home-events__list,
     .archive-events__list {
       display: grid;
       grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1150px) {
+    .home-events__list,
+    .archive-events__list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
 
-.home-event,
+/* .home-event,
 .archive-event {
-  border-top: 2px solid #d8d4bf; }
+  border-top: 2px solid #d8d4bf; } */
+
+.home-event__wrapper,
+.archive-event__wrapper {
+  border-top: 2px solid #d8d4bf;
+}
+
+.event-thumbnail {
+  display: block;
+}
 
 .home-event__date,
 .archive-event__date {
@@ -1458,7 +1494,8 @@ Mastheads
       width: 48%;
       float: right; } }
 
-.inquiries__intro {
+.inquiries__intro,
+.inquiries-content p:first-of-type {
   font-family: "commuters-sans", sans-serif;
   font-weight: 600; }
 
@@ -1741,7 +1778,8 @@ Mastheads
   -webkit-transition: background-color .125s ease-in-out;
   transition: background-color .125s ease-in-out; }
   .wine-row:hover {
-    background-color: #260422; }
+    /*background-color: #260422;*/
+  }
 
 .wine-name,
 .wine-type,
@@ -1771,6 +1809,7 @@ Mastheads
   font-style: italic; }
 
 .subcategory-table th {
+  text-align: right;
   border-bottom: 1px solid rgba(216, 212, 191, 0.25);
   padding: 10px 5px; }
   @media (max-width: 800px) {
@@ -1787,6 +1826,7 @@ Mastheads
 .wine-glass,
 .wine-half,
 .wine-bottle {
+  text-align: right;
   position: relative;
   width: 30px; }
   @media (min-width: 800px) {
@@ -1794,23 +1834,6 @@ Mastheads
     .wine-half,
     .wine-bottle {
       width: 60px; } }
-  .wine-glass::after,
-  .wine-half::after,
-  .wine-bottle::after {
-    position: absolute;
-    content: '';
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid #d8d4bf;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-5px, -5px);
-            transform: translate(-5px, -5px); }
-  .wine-glass.available::after,
-  .wine-half.available::after,
-  .wine-bottle.available::after {
-    background-color: #d8d4bf; }
 
 .widget-title {
   font-size: 20px;
@@ -1830,6 +1853,11 @@ Mastheads
   font-weight: 200;
   text-transform: uppercase;
   letter-spacing: 0.15em; }
+
+.entry-date a {
+  text-decoration: none;
+  font-weight: bold;
+}
 
 .masthead__date {
   margin-bottom: 1em; }
@@ -1871,13 +1899,18 @@ article.post {
     article.post {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
-      grid-gap: 1em; } }
+      grid-gap: 0 2em; } }
 
 .entry-header {
-  grid-column: span 5; }
+  grid-column: span 10; }
 
 .entry-content {
-  grid-column: span 7; }
+  grid-column: span 10; }
+
+.post-thumbnail {
+  grid-column: span 2;
+  grid-row: span 3;
+}
 
 .entry-footer {
   grid-column: span 12; }

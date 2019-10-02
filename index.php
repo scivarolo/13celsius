@@ -14,7 +14,7 @@
 
 get_header();
 ?>
-	<?php $masthead_image = get_field('background_image');
+	<?php $masthead_image = get_field('background_image', 12);
 	if($masthead_image) : ?>
 		<div class="masthead masthead--page" style="background: linear-gradient(to top, rgba(29, 0, 25, 0.5), rgba(29, 0, 25, 0.5)), url('<?php echo $masthead_image['sizes']['masthead']; ?>') fixed center/cover;">
 	<?php else : ?>
@@ -35,7 +35,7 @@ get_header();
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
-				
+
 			endif; ?>
 			<?php /* Start the Loop */
 			while ( have_posts() ) :
@@ -49,7 +49,7 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile; ?>
-			
+
 			<?php the_posts_navigation();
 
 		else :

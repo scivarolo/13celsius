@@ -10,18 +10,30 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
-	<?php if(!is_singular()): ?>
-	<header class="entry-header">
-	<div class="entry-date"><?php the_date(); ?></div>
-	<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
 
+	<?php if(!is_singular()): ?>
+	<?php celsius_post_thumbnail(); ?>
+	<header class="entry-header">
+	<!-- <div class="entry-date"><?php the_date(); ?></div> -->
+
+	<?php if(get_field('url')): ?>
+		<?php if (get_field('source')): ?>
+			<div class="entry-date"><a href="<?php echo esc_url(get_field('url')); ?>"><?php the_field('source'); ?></a></div>
+		<?php endif; ?>
+		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_field('url') ) . '" rel="bookmark">', '</a></h2>' );
+	else: ?>
+		<?php if(get_field('source')): ?>
+			<div class="entry-date"><?php the_field('source'); ?></div>
+		<?php endif; ?>
+		<?php the_title('<h2 class="entry-title">', '</h2>'); ?>
+
+	<?php endif; ?>
 	</header><!-- .entry-header -->
 	<?php endif; ?>
-	
-	<?php celsius_post_thumbnail(); ?>
+
 
 	<div class="entry-content">
+
 		<?php
 		the_content( sprintf(
 			wp_kses(
@@ -44,6 +56,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php celsius_entry_footer(); ?>
+		<!-- <?php celsius_entry_footer(); ?> -->
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

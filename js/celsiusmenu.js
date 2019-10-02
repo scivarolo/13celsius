@@ -1,8 +1,7 @@
-debug = true;
+debug = false;
 
-const menuUrl = 'https://script.google.com/macros/s/AKfycbzSMO68LJqEYYZX5gChHe1njDeGFOu7FGYvuH379bPi8vvdVhRt/exec';
-
-const foodMenuUrl = 'https://script.google.com/macros/s/AKfycbyKetg9-vNR78B-l2FpgcUnpvi3gffPpnajtSf8lQ/exec';
+const menuUrl = '' //INSERT Google Script Here;
+const foodMenuUrl = '' //INSERT Google Script Here;
 
 let getJSON = function (url, callback) {
   var xhr = new XMLHttpRequest();
@@ -38,18 +37,18 @@ function drawMenu(wineList) {
       sectionIndices.push(i);
     }
   }
- 
+
   sectionIndices.forEach(function(section, i) {
     sections[i] = wineList.list.slice(sectionIndices[i], sectionIndices[i + 1]);
   });
-  
+
   // Split Sections into subcategory arrays
   let subcatIndices = [];
 
-  for(let i = 0; i < sections.length; i++) {
+  for (let i = 0; i < sections.length; i++) {
     subcatIndices[i] = [];
-    for( let j = 0; j < sections[i].length; j++) { 
-      if(sections[i][j].subcat) {
+    for ( let j = 0; j < sections[i].length; j++) {
+      if (sections[i][j].subcat) {
         subcatIndices[i].push(j);
       }
     }
@@ -57,17 +56,17 @@ function drawMenu(wineList) {
 
   let newSections = [];
 
-  for( let i = 0; i < sections.length; i++) {
+  for ( let i = 0; i < sections.length; i++) {
     newSections[i] = [];
     newSections[i].push(sections[i][0]);
     subcatIndices[i].forEach(function(subcat, j) {
       newSections[i][j+1] = sections[i].slice(subcatIndices[i][j], subcatIndices[i][j+1]);
     });
   }
-  
+
   let wineMenu = newSections;
 
-  if(debug) {
+  if (debug) {
     console.log(wineMenu);
   }
 
@@ -76,7 +75,7 @@ function drawMenu(wineList) {
   subNav.classList.add('menu-subnav');
   let subNavHTML = '';
   for (let i = 0; i < wineMenu.length; i++) {
-    subNavHTML += '<li><a href="#section' + i + '">' + wineMenu[i][0].section + '</a></li>';
+    subNavHTML += `<li><a href="#section${i}">${wineMenu[i][0].section}</a></li>`;
   }
   subNav.innerHTML = subNavHTML;
 
@@ -84,20 +83,16 @@ function drawMenu(wineList) {
 
 
   // Display the Menu
-  
-  // Temporary placeholder content
-  let sectionDesc = 'Our list of fine and dynamic wines from all over the world is curated and cared for by Adele Corrigan. Let our staff help you find that glass or bottle of wine in our cellar that is meant specifically for you. We are able to offer tastes of a lot of our wines.';
-  let subCatDescr = 'Our list of fine and dynamic wines from all over the world is curated and cared for by Adele Corrigan. Let our staff help you find that glass or bottle of wine in our cellar that is meant specifically for you. We are able to offer tastes of a lot of our wines.';
 
   // // Create div and add header for each section
-  for( let i = 0; i < wineMenu.length; i++) {
+  for (let i = 0; i < wineMenu.length; i++) {
     let section = wineMenu[i];
     let sectionDiv = document.createElement('div');
     sectionDiv.setAttribute('id', 'section' + i);
     sectionDiv.classList.add('menu-section');
     let sectionDivContainer = document.createElement('div');
     sectionDivContainer.classList.add('container');
-    
+
     sectionHeaderWrapper = document.createElement('header');
     sectionHeaderWrapper.classList.add('menu-section-header')
 
@@ -121,7 +116,7 @@ function drawMenu(wineList) {
 
       let subCatHeader = document.createElement('div');
       subCatHeader.classList.add('subcategory-header', 'accordion-button');
-      subCatHeader.innerHTML = '<h3>' + subCat[0].subcat + '</h3>';
+      subCatHeader.innerHTML = `<h3>${subCat[0].subcat}</h3>`;
 
       let subCatDescription = document.createElement('p');
       subCatDescription.classList.add('subcategory-desc');
@@ -131,38 +126,38 @@ function drawMenu(wineList) {
       subCatDiv.classList.add('table-wrapper', 'accordion-panel');
       let subCatTable = document.createElement('table');
       subCatTable.classList.add('subcategory-table');
-      
-      let subCatTableHead = '<thead><tr><th></th><th>' + subCat[0].glass + '</th><th>' + subCat[0].half + '</th><th>' + subCat[0].bottle + '</th></tr></thead>';
+
+      let subCatTableHead = `<thead><tr><th></th><th>${subCat[0].glass}</th><th>${subCat[0].half}</th><th>${subCat[0].bottle}</th></tr></thead>`;
 
       let subCatRows = document.createElement('tbody');
-    
-      for(let k = 1; k < subCat.length; k++) {
+
+      for (let k = 1; k < subCat.length; k++) {
         let wine = subCat[k];
         let subCatRow = document.createElement('tr');
         subCatRow.classList.add('wine-row');
-        
-        
+
+
         let wineDetails = document.createElement('td');
         let wineName, wineType, wineOrigin, wineNotes, wineGlass, wineHalf, wineBottle;
-        if(wine.name) {
+        if (wine.name) {
           wineName = document.createElement('span');
           wineName.classList.add('wine-name');
           wineName.innerHTML = wine.name;
           wineDetails.append(wineName);
         }
-        if(wine.type) {
+        if (wine.type) {
           wineType = document.createElement('span');
           wineType.classList.add('wine-type');
           wineType.innerHTML = wine.type;
           wineDetails.append(wineType);
         }
-        if(wine.origin) {
+        if (wine.origin) {
           wineOrigin = document.createElement('span');
           wineOrigin.classList.add('wine-origin');
           wineOrigin.innerHTML = wine.origin;
           wineDetails.append(wineOrigin);
         }
-        if(wine.notes) {
+        if (wine.notes) {
           wineNotes = document.createElement('span');
           wineNotes.classList.add('wine-notes');
           wineNotes.innerHTML = wine.notes;
@@ -172,32 +167,25 @@ function drawMenu(wineList) {
 
         wineGlass = document.createElement('td');
         wineGlass.classList.add('wine-glass');
-        if(wine.glass) {
-          //wineGlass.innerHTML = 'yes';
-          wineGlass.classList.add('available');
-        } else {
-          wineGlass.classList.add('unavailable');
+        if (wine.glass) {
+          wineGlass.textContent = wine.glass;
         }
         subCatRow.append(wineGlass);
 
         wineHalf = document.createElement('td');
         wineHalf.classList.add('wine-half');
-        if(wine.half) {
-          wineHalf.classList.add('available');
-        } else {
-          wineHalf.classList.add('unavailable');
+        if (wine.half) {
+          wineHalf.textContent = wine.half;
         }
         subCatRow.append(wineHalf);
-        
+
         wineBottle = document.createElement('td');
         wineBottle.classList.add('wine-bottle');
-        if(wine.bottle) {
-          wineBottle.classList.add('available');
-        } else {
-          wineBottle.classList.add('unavailable');
+        if (wine.bottle) {
+          wineBottle.textContent = wine.bottle;
         }
         subCatRow.append(wineBottle);
-        
+
         subCatRows.append(subCatRow);
       }
 
@@ -213,8 +201,8 @@ function drawMenu(wineList) {
     }
 
     document.getElementById('wine-menu').append(sectionDiv);
-  } 
-  
+  }
+
 
   getJSON(foodMenuUrl, function (err, data) {
     if (err !== null) {
@@ -281,13 +269,13 @@ function drawFoodMenu(foodList) {
   let subNavHTML = '';
   for (let i = 0; i < foodMenu.length; i++) {
     let j = 100;
-    subNavHTML += '<li><a href="#section' + j + '">' + foodMenu[i][0].section + '</a></li>';
+    subNavHTML += `<li><a href="#section${j}">${foodMenu[i][0].section}</a></li>`;
     j++;
   }
   document.querySelector('.subnav .menu-subnav').insertAdjacentHTML('beforeend', subNavHTML);
 
   // Render Food Sections
-  
+
   // // Create div and add header for each section
   for (let i = 0; i < foodMenu.length; i++) {
     let section = foodMenu[i];
@@ -321,7 +309,7 @@ function drawFoodMenu(foodList) {
 
       let subCatHeader = document.createElement('div');
       subCatHeader.classList.add('subcategory-header', 'accordion-button');
-      subCatHeader.innerHTML = '<h3>' + subCat[0].subcat + '</h3>';
+      subCatHeader.innerHTML = `<h3>${subCat[0].subcat}</h3>`;
 
       let subCatDescription = document.createElement('p');
       subCatDescription.classList.add('subcategory-desc');
@@ -332,7 +320,7 @@ function drawFoodMenu(foodList) {
       let subCatTable = document.createElement('table');
       subCatTable.classList.add('subcategory-table');
 
-      let subCatTableHead = '<thead><tr><th></th></tr></thead>';
+      let subCatTableHead = `<thead><tr><th></th><th></th></tr></thead>`;
 
       let subCatRows = document.createElement('tbody');
 
@@ -357,6 +345,12 @@ function drawFoodMenu(foodList) {
           foodDetails.append(foodDescription);
         }
         subCatRow.append(foodDetails);
+
+        if (foodItem.price) {
+          foodPrice = document.createElement('td');
+          foodPrice.textContent = foodItem.price;
+          subCatRow.append(foodPrice);
+        }
         subCatRows.append(subCatRow);
       }
 
@@ -376,7 +370,7 @@ function drawFoodMenu(foodList) {
 
   accordionAnimation();
 
-} 
+}
 
 
 function accordionAnimation() {
