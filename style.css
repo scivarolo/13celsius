@@ -1778,7 +1778,8 @@ Mastheads
   -webkit-transition: background-color .125s ease-in-out;
   transition: background-color .125s ease-in-out; }
   .wine-row:hover {
-    background-color: #260422; }
+    /*background-color: #260422;*/
+  }
 
 .wine-name,
 .wine-type,
