@@ -1,7 +1,7 @@
 debug = false;
 
-const menuUrl = '' //INSERT Google Script Here;
-const foodMenuUrl = '' //INSERT Google Script Here;
+const menuUrl = 'https://script.google.com/macros/s/AKfycbzSMO68LJqEYYZX5gChHe1njDeGFOu7FGYvuH379bPi8vvdVhRt/exec';
+const foodMenuUrl = 'https://script.google.com/macros/s/AKfycbyKetg9-vNR78B-l2FpgcUnpvi3gffPpnajtSf8lQ/exec';
 
 let getJSON = function (url, callback) {
   var xhr = new XMLHttpRequest();

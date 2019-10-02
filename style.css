@@ -1077,7 +1077,7 @@ Mastheads
 .footer-newsletter label, .footer-newsletter input {
   display: block;
   width: 75%;
-  margin: 0 auto; }
+}
 
 .footer-newsletter label {
   text-align: left; }
@@ -1526,7 +1526,7 @@ Mastheads
   margin-bottom: 1em;
   border: none;
   border-bottom: 2px solid #d8d4bf;
-  background-color: #2f052a;
+  background-color: #2b0516;
   color: #d8d4bf;
   border-radius: 0;
   padding: 10px !important;
@@ -1534,7 +1534,7 @@ Mastheads
   -webkit-transition: all .125s ease-in-out;
   transition: all .125s ease-in-out; }
   .inquiries-form input:not([type="submit"]):focus, .inquiries-form textarea:focus {
-    background-color: #500848;
+    background-color: #44061f;
     outline: none; }
 
 .inquiries-form button[type="submit"] {
@@ -2033,3 +2033,34 @@ object {
 
 .gallery-caption {
   display: block; }
+
+
+/*---------- Constant Contact Form ----------- */
+
+.footer-newsletter .ctct-form-header {
+  text-align: left!important;
+  font-size: 22px!important;
+  font-family: "commuters-sans", sans-serif!important;
+  font-weight: 600!important;
+}
+
+.footer-newsletter label.ctct-form-label,
+div.ctct-form-embed div.ctct-form-defaults p.ctct-gdpr-text {
+  color: #d8d4bf !important;
+}
+
+div.ctct-form-embed div.ctct-form-defaults p.ctct-gdpr-text {
+  font-size: 9px!important;
+}
+
+.ctct-inline-form .g-recaptcha {
+  display: none !important;
+}
+
+div.ctct-form-embed div.ctct-form-defaults p.ctct-form-footer {
+  margin: 0 !important;
+}
+
+div.ctct-form-embed div.ctct-form-defaults p.ctct-gdpr-text {
+  display: none !important;
+}
