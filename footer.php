@@ -18,17 +18,17 @@
 			<div class="container">
 				<div class="footer-hours">
 					<h2 class="footer-label">Hours</h2>
-					<?php if(have_rows('hours', 'site_options') ) : 
+					<?php if(have_rows('hours', 'site_options') ) :
 						while(have_rows('hours', 'site_options') ) : the_row(); ?>
 					<p><?php the_sub_field('days'); ?><br><?php the_sub_field('time'); ?></p>
 					<?php endwhile; ?>
 					<?php endif; ?>
-					
+
 				</div>
 				<div class="footer-location">
 					<h2 class="footer-label">Location</h2>
 					<p><a href="https://goo.gl/maps/dyE8yEWd9pTG9PK16"><?php the_field('address', 'site_options'); ?></a></p>
-					
+
 					<p><a href="https://goo.gl/maps/dyE8yEWd9pTG9PK16"><img src="<?php echo get_template_directory_uri(); ?>/images/map-temp.png" /></a></p>
 				</div>
 				<div class="footer-contact">
@@ -60,7 +60,7 @@
 
 					<div class="footer-wordmark">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/wordmark.svg" />
-					</div>	
+					</div>
 					<?php if(have_rows('social_media', 'site_options')): ?>
 						<ul class="social-icons">
 							<?php while(have_rows('social_media', 'site_options')): the_row(); ?>
@@ -72,12 +72,17 @@
 							<?php endwhile; ?>
 						</ul>
 					<?php endif; ?>
-						
+
 				</div>
 				<div class="footer-middle">
-					<div class="footer-newsletter">
+					<!-- <div class="footer-newsletter">
 						<label for="newsletter">Sign up for our newsletter</label>
 						<input type="text" id="newsletter" />
+					</div> -->
+					<div class="footer-newsletter">
+						<!-- Begin Constant Contact Inline Form Code -->
+						<div class="ctct-inline-form" data-form-id="807fe762-f9fe-447d-9ca7-e4d01b53e897"></div>
+						<!-- End Constant Contact Inline Form Code -->
 					</div>
 					<div class="footer-nav">
 						<?php
@@ -90,7 +95,7 @@
 				</div>
 			</div>
 		</div>
-				
+
 		<div class="site-info">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
@@ -101,6 +106,9 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<!-- Begin Constant Contact Active Forms -->
+<script> var _ctct_m = "17c9f56fa95f5222ca903cbfd6280594"; </script>
+<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
+<!-- End Constant Contact Active Forms -->
 </body>
 </html>

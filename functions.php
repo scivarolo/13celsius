@@ -121,7 +121,8 @@ add_action( 'widgets_init', 'celsius_widgets_init' );
  * Enqueue scripts and styles.
  */
 function celsius_scripts() {
-	wp_enqueue_style( 'celsius-style', get_stylesheet_uri() );
+	$style_ver = filemtime( get_stylesheet_directory() . '/style.css' );
+	wp_enqueue_style( 'celsius-style', get_stylesheet_uri(), '', $style_ver );
 
 	wp_enqueue_script( 'celsius-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
